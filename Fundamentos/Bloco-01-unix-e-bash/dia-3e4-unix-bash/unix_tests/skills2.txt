@@ -1,0 +1,8 @@
+Internet
+Unix
+Bash
+JavaScript
+Angular
+React
+Phyton
+Ruby
