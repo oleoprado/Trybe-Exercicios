@@ -1,3 +1,9 @@
+#Ignorar os arquivos:
+####################
+.DS_Store
+.DS_Store?
+.vscode
+
 # Compiled source #
 ###################
 *.com
@@ -28,10 +34,8 @@
 
 # OS generated files #
 ######################
-*.DS_Store
-*.DS_Store?
-*._*
-*.Spotlight-V100
-*.Trashes
-*ehthumbs.db
-*Thumbs.db
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

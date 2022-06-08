@@ -1,0 +1,33 @@
+body {
+    font-size: 16px;
+}
+h1 {
+    font-size: 65px;
+    font-family: sans-serif;
+    color: #FF9D34;
+}
+ul {
+    background-color: #0F58EE;
+    line-height: 2.5em;
+    text-align:center;
+    text-decoration: line-through;
+    list-style: square;
+    list-style-position: inside;
+}
+p {
+    font-weight: 600;
+    font-size: 3em;
+    font-style: oblique;
+}
+.bg_p_ul {
+    background-color: #CD00E1;
+}
+#amarelo {
+    background-color: #FEEE08;
+}
+#vermelho {
+    background-color: #FF6567;
+}
+#marrom {
+    background-color: #BD7155;
+}
