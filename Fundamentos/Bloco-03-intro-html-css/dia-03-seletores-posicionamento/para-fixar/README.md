@@ -1,6 +1,6 @@
 # DIA 3
 
-O objetivo do exercício é fixar o conteúdo apresentado no video sobre BOX MODEL
+O objetivo do exercício é fixar o conteúdo apresentado no video sobre Posicionamento de Elementos.
 
 Os requisitos do exercícios são:
 
