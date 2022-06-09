@@ -2,30 +2,31 @@
     width: 200px;
     position: absolute;
     z-index: 1;
-    bottom: 58%;
-    
+    bottom: 40%;
+    margin-left: 10%;
   }
   
   .goomba {
     width: 100px;
     position: absolute;
-    bottom: 45%;
+    bottom: 25%;
     z-index: 2;
-    left: 7%;
+    left: 5%;
+    margin-left: 10%;
 
   }
   
   .baloon {
     position: absolute;
-    left: 35%;
-    bottom: 55%;
+    left: 49%;
+    bottom: 53%;
     z-index: 3;
   }
   
   .speach {
     font-size: 25px;
     position: absolute;
-    left: 37.5%;
+    left: 50%;
     bottom: 63%;
     z-index: 4;
   }
@@ -34,7 +35,7 @@
     width: 200px;
     position: absolute;
     left: 70%;
-    bottom: 45%;
+    bottom: 40%;
     z-index: 5;
-    margin-left: -2%;
+    
   }
