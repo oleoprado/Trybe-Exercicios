@@ -7,36 +7,50 @@ div:hover {
 }
 div:nth-of-type(1) {
     background-color: #70D6FF;
+    max-width: 40%;
 }
 div:nth-of-type(2) {
     background-color: #FF70A6;
+    max-width: 50%;
 }
 div:nth-of-type(3) {
     background-color: #FF9770;
+    max-width: 60%;
 }
 div:nth-of-type(4) {
     background-color: #FFD670;
+    max-width: 50%;
 }
 div:nth-of-type(5) {
     background-color: #E9FF70;
+    max-width: 40%
 }
 
 div:nth-of-type(1) > h3 {
     color: #E9FF70;
+    text-align: right;
 }
 
 div:nth-of-type(2) > h3 {
     color: #FFD670;
+    text-align: right;
 }
 
 div:nth-of-type(3) > h3 {
     color: #70D6FF;
+    text-align: right;
 }
 
 div:nth-of-type(4) > h3 {
     color: #FF70A6;
+    text-align: right;
 }
 
 div:nth-of-type(5) > h3 {
     color: #FF9770;
+    text-align: right;
+}
+
+div:nth-of-type(odd) > h3 {
+    font-style: italic;
 }
