@@ -1,6 +1,6 @@
 # DIA 3
 
-O objetivo do exercício é fixar o conteúdo apresentado no video sobre Posicionamento de Elementos.
+O objetivo do exercício 'MARIO' é fixar o conteúdo apresentado no video sobre Posicionamento de Elementos.
 
 Os requisitos do exercícios são:
 
@@ -10,18 +10,17 @@ Os requisitos do exercícios são:
 
 3. Posicione o balão para que se torne uma fala de Bowser.
 
-4. 
+O objetivo do exercício 'PSEUDOCLASSES' é estilizar cada elemento usando as pseudoclasses sem atribuir nenhuma classe ou ID.
 
-5. 
+Os requisitos do exercício são:
 
-6. 
+1. Estilize as divs para que, ao passar o cursor por cima das mesmas, elas ganhem uma borda. 
 
-7.
+2. Faça cada div ter uma cor própria.
 
-8. 
+3. Estilize cada uma das tags h3.
 
-9. 
+4. Faça a terceira div ser maior que as demais.
 
-10. 
+5. Deixe as tags ímpares h3 com o texto em itálico.
 
-11. 
