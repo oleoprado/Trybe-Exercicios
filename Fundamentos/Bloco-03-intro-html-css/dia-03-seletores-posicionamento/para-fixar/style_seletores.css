@@ -1,3 +1,7 @@
+div {
+    text-transform: uppercase;
+}
+
 div:hover {
     border: 1px solid white;
 }
@@ -16,3 +20,4 @@ div:nth-of-type(4) {
 div:nth-of-type(5) {
     background-color: #E9FF70;
 }
+
