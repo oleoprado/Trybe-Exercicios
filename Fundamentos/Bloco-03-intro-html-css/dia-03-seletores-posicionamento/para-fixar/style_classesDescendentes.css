@@ -1,0 +1,60 @@
+ol li {
+    background-color: yellow;
+}
+
+ol li:nth-child(even) {
+    color: green;
+}
+
+ol li:nth-child(odd) {
+    text-transform: uppercase;
+}
+
+h1,h3 {
+    color: red;
+}
+
+h1 em, h3 em {
+    font-size: 40px;
+    border: 1px solid #000;
+}
+
+li {
+    font-size: 20px;
+}
+
+li em {
+    font-weight: 700;
+}
+
+#linguagens li:not(:nth-child(n + 4)){
+    color: blue;
+}
+
+.have-java {
+    background-color: pink;
+}
+
+#aliados li a:hover {
+    font-weight: 700;
+}
+
+#aliados li a[href*="https://pt.stackoverflow.com/"]:hover {
+    color: orange;
+}
+
+#aliados li a[href*="https://www.w3schools.com/"]:hover {
+    color: green;
+}
+
+#aliados li a[href*="https://developer.mozilla.org/pt-BR/"]:hover {
+    color: black;
+}
+
+#aliados li a[href*="https://devdocs.io/"]:hover {
+    color: yellow;
+}
+
+#aliados li a[href*="https://app.betrybe.com/"]:hover {
+    color: green;
+}
