@@ -3,3 +3,73 @@
     margin: 0;
     box-sizing: border-box;
 }
+ol li, ul li {
+    margin-left: 50px;
+}
+
+h2,h3 {
+    text-transform: uppercase;
+}
+
+header {
+    border: 2px solid blue;
+}
+header nav {
+    border: 2px solid red;
+}
+
+aside iframe {
+    border: 2px solid red;
+}
+
+main {
+    border: 2px solid #07D01D;
+}
+
+article {
+    border: 2px solid #FEEE08;
+}
+
+.info-sobre {
+    border: 3px solid black;
+}
+
+.tabela-classificacao {
+    border: 3px solid red;
+}
+
+.visao {
+    border: 3px solid red;
+}
+
+.img-visao {
+    border: 3px solid #0F58EE;
+}
+
+.onde-vivem {
+    border: 3px solid black
+}
+
+.defesa-ataque {
+    border: 3px solid red;
+}
+
+.img-defesa {
+    border: 3px solid orange;
+    
+}
+
+.familia {
+    border: 3px solid #0F58EE;
+}
+
+.referencia {
+    border: 3px solid #E823A1;
+}
+.referencia ol {
+    border: 3px solid #8300E0;
+}
+
+.rodape {
+    border: 3px solid #F3D910;
+}
