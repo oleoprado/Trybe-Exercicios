@@ -3,73 +3,79 @@
     margin: 0;
     box-sizing: border-box;
 }
-ol li, ul li {
-    margin-left: 50px;
+
+.titulo-header {
+    margin: 20px auto 20px auto;
+    text-align: center;
+    width: 90%;
+    background-color: bisque;
 }
 
-h2,h3 {
+#menu {
+    background-color: red;
+    width: 90%;
+    height: auto;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
+#menu a {
+    text-decoration: none;
+}
+
+.nav-menu ul li {
+    display: inline-block;
+    margin: 0 10px 0 10px;
     text-transform: uppercase;
 }
 
-header {
-    border: 2px solid blue;
-}
-header nav {
-    border: 2px solid red;
+#aside {
+    background-color: blue;
+    width: 320px;
+    height: auto;
+    display: inline-block;
+    margin-left: 77.5vw;
+    /* margin-top: 5vh; */
+    padding: 10px 0; 
 }
 
-aside iframe {
-    border: 2px solid red;
+iframe {
+    width: 320px;
+    height: auto;
 }
+/* #aside h3 {
+    text-align: center;
+    vertical-align: center;
+    padding: 10px;
+    width: 320px;
+   
+} */
 
 main {
-    border: 2px solid #07D01D;
+    width: 100vw;
+    margin-top: -20vh;
 }
 
-article {
-    border: 2px solid #FEEE08;
+.secoes p, .secoes h3, .secoes h2 {
+    width: 55vw;
+    margin-left: 15vw;
+
 }
 
-.info-sobre {
-    border: 3px solid black;
+/* .fotos-sobre {
+    width: 250px;
+    border-radius: 50%;
+    margin: 20px;
+    vertical-align: middle;
+} */
+
+.img-01 {
+    margin-left: 5vw;
+    padding: 10px
 }
 
-.tabela-classificacao {
-    border: 3px solid red;
-}
-
-.visao {
-    border: 3px solid red;
-}
-
-.img-visao {
-    border: 3px solid #0F58EE;
-}
-
-.onde-vivem {
-    border: 3px solid black
-}
-
-.defesa-ataque {
-    border: 3px solid red;
-}
-
-.img-defesa {
-    border: 3px solid orange;
+.container {
+    background-color: red;
     
-}
-
-.familia {
-    border: 3px solid #0F58EE;
-}
-
-.referencia {
-    border: 3px solid #E823A1;
-}
-.referencia ol {
-    border: 3px solid #8300E0;
-}
-
-.rodape {
-    border: 3px solid #F3D910;
+    
 }
