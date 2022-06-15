@@ -168,3 +168,32 @@ header {
     border-radius: 25px;
 
 }
+
+#container-defesa {
+    width: 55%;
+    height: 960px;
+    border: 2px solid red;
+    margin-left: 20%;
+    margin-top: 30px;
+}
+
+.img-defesa-1 {
+    background-image: url(https://www.aquaa3.com.br/wp-content/uploads/2020/09/animal-mais-forte-mundo-1024x734.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 95%;
+    height: 450px;
+    margin-left: 22px;
+}
+
+.img-defesa-2 {
+    background-image: url(https://www.aquaa3.com.br/wp-content/uploads/2020/09/Animal-mais-rapido-1024x734.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 95%;
+    height: 450px;
+    margin-left: 22px;
+    margin-top: 40px;
+}
