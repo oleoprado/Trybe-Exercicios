@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Blaka&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -5,11 +9,11 @@
     text-decoration: none;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Blaka&display=swap');
+body {
+    background-color: #222222;
+}
 
-header  {
+header {
     text-align: center;
 }
 
@@ -21,7 +25,7 @@ header  {
     display: inline-block;
     padding: 10px 20px 10px 20px;
     text-transform: uppercase;
-    
+
 
 }
 
@@ -31,39 +35,47 @@ header  {
     padding: 30px 0 20px 0;
     font-family: 'Luckiest Guy', cursive;
     font-size: 2em;
-    
+
 }
 
 #aside {
-   position: absolute;
-   margin-left: 940px;
-   margin-bottom: 900px;
-   width: 350px;
-   height: 270px;
-   /* border: 4px solid blue; */
-   float: right;
-   right: 0px;
-   top: 202px;
-    
+    position: absolute;
+    margin-left: 940px;
+    margin-bottom: 900px;
+    width: 350px;
+    height: 270px;
+    /* border: 4px solid blue; */
+    float: right;
+    right: 0px;
+    top: 257px;
+   
 }
 
 .video-aside h3 {
     padding: 5px;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #fc0;;
+    text-transform: uppercase;
+    font-size: 1em;
 }
 
-.secoes p, .secoes h2, .secoes h3 {
+.secoes p,
+.secoes h2,
+.secoes h3 {
     width: 55%;
     margin-left: 20%;
     font-family: 'Montserrat', sans-serif;
-    
+
 }
 
-.secoes h2, .secoes h3 {
+.secoes h2,
+.secoes h3 {
     text-align: center;
     font-size: 2em;
     padding-top: 60px;
     text-transform: uppercase;
+    color: #fc0;
 }
 
 .secoes p {
@@ -71,6 +83,11 @@ header  {
     font-size: 1.1em;
     line-height: 25px;
     padding-top: 40px;
+    color: #d7d7d7;
+}
+
+.secoes p strong {
+    color: #fc0;
 }
 
 .container-sobre {
@@ -79,7 +96,7 @@ header  {
     max-width: 55%;
     height: 680px;
     margin-left: 20%;
-    
+
 }
 
 
@@ -104,7 +121,7 @@ header  {
     position: absolute;
     margin-left: -60px;
     border-radius: 50%;
-    
+
 }
 
 .img-02 {
@@ -118,7 +135,7 @@ header  {
     position: absolute;
     margin-left: 305px;
     border-radius: 50%;
-   
+
 }
 
 .img-03 {
@@ -132,7 +149,7 @@ header  {
     position: absolute;
     margin-left: 660px;
     border-radius: 50%;
-   
+
 }
 
 .tabela-classificacao {
@@ -140,10 +157,13 @@ header  {
     width: 250px;
     /* border: 2px solid red; */
     font-family: 'Montserrat', sans-serif;
-    
+
 }
 
-table, th, tr, td {
+table,
+th,
+tr,
+td {
     border: 1px solid black;
     border-collapse: collapse;
     padding: 5px;
@@ -153,9 +173,7 @@ table th {
     background-color: aqua;
 }
 
-table a {
-    
-}
+table a {}
 
 .tb-bold {
     font-weight: 600;
@@ -184,7 +202,7 @@ table a {
     width: 50%;
     height: 450px;
     border: 2px solid black;
-    
+
 }
 
 .img-visao-2 {
@@ -250,13 +268,15 @@ table a {
     margin-left: 43%;
     list-style: none;
     line-height: 25px;
-    font-family: 'Montserrat', sans-serif; 
+    font-family: 'Montserrat', sans-serif;
+    color: #525252;
 }
 
 #familias ul {
     margin-top: 20px;
     margin-bottom: 10px;
 }
+
 #referencias {
     border: 2px solid red;
 }
@@ -281,4 +301,3 @@ table a {
     padding-top: 8px;
 
 }
-
