@@ -45,7 +45,7 @@ header {
     /* border: 4px solid blue; */
     right: 0%;
     top: 54%;
-   
+
 }
 
 iframe {
@@ -57,7 +57,8 @@ iframe {
     padding: 10px 5px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
-    color: #fc0;;
+    color: #fc0;
+    ;
     text-transform: uppercase;
     font-size: 1em;
 }
@@ -81,7 +82,7 @@ iframe {
 }
 
 .secoes p {
-    text-align: justify;
+    text-align: left;
     font-size: 1.1em;
     line-height: 25px;
     padding-top: 40px;
@@ -182,19 +183,19 @@ table th {
     color: #525252;
 }
 
- a:link {
+table a:link {
     color: orange;
 }
 
- a:visited {
+table a:visited {
     color: #fc0;
 }
 
-a:hover {
+table a:hover {
     color: orange;
 }
 
- a:active {
+table a:active {
     color: #fc0;
 }
 
@@ -209,7 +210,7 @@ a:hover {
     text-align: justify;
     padding-left: 10px;
     color: #fc0;
-    
+
 }
 
 #container-visao {
@@ -296,30 +297,36 @@ a:hover {
 #familias ul li {
     margin-left: 42%;
     list-style: none;
-    line-height: 25px;
+    line-height: 1.5em;
     font-family: 'Montserrat', sans-serif;
-    color: #000;
+    color: #d7d7d7;
     font-weight: 600;
     display: inline-block;
-    background-color: #d7d7d7;
     width: 11%;
     text-align: center;
 }
 
 #familias ul {
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-top: 2%;
 }
 
-#referencias {
-    border: 2px solid red;
+#referencias a:link,
+a:visited {
+    color: #d7d7d7;
+}
+
+#referencias a:hover {
+    color: #fc0;
 }
 
 #referencias ol {
-    margin-left: 34%;
-    padding: 60px 0 10px 0;
+    padding: 30px 430px 20px 430px;
     line-height: 20px;
     list-style-position: inside;
+}
+
+#referencias li::marker {
+    color: #fc0;
 }
 
 /* .rodape p {
