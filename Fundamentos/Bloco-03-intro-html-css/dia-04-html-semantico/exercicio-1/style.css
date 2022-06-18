@@ -372,27 +372,26 @@ a:visited {
 .mapouter {
     position: relative;
     text-align: right;
-    height: 380px;
-    width: 600px;
+    height: 292px;
+    width: 504px;
 }
 
 .gmap_canvas {
     overflow: hidden;
     background: none !important;
-    height: 270px;
-    width: 600px;
+    height: 291px;
+    width: 504px;
     position: absolute;
-    top: 10vh;
 }
 
 .iframe-maps {
     width: 50vw;
-    height: 50vh;
+    height: 55vh;
 }
 
 .endereco {
     float: right;
-    margin: 10% 20px 10% 0;
+    margin: 70px 120px 10% 0;
 }
 
 .fieldset-contato {
@@ -433,5 +432,23 @@ a:visited {
 
 .input-contato::placeholder,
 .textarea-contato::placeholder {
+    color: #222222;
+}
+
+.btn-enviar {
+    background-color: #fc0;
+    padding: 10px 222px;
+    border-radius: 20px;
+    position: absolute;
+    top: 160vh;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #222222;
+}
+
+.btn-enviar:link,
+.btn-enviar:visited,
+.btn-enviar:active {
     color: #222222;
 }
