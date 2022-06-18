@@ -363,18 +363,23 @@ a:visited {
 
 /* página sobre */
 
+#sobre-container {
+    padding-bottom: 10%;
+}
+
+/* página contato */
+
 .mapouter {
     position: relative;
     text-align: right;
-    height: 500px;
+    height: 380px;
     width: 600px;
-    margin-top: 15vh 0 0 27vw;
 }
 
 .gmap_canvas {
     overflow: hidden;
     background: none !important;
-    height: 400px;
+    height: 270px;
     width: 600px;
     position: absolute;
     top: 10vh;
@@ -385,6 +390,48 @@ a:visited {
     height: 50vh;
 }
 
-#sobre-container {
-    padding-bottom: 10%;
+.endereco {
+    float: right;
+    margin: 10% 20px 10% 0;
+}
+
+.fieldset-contato {
+    border: none;
+}
+
+.form-contato {
+    float: left;
+    margin: 70px 0 0 120px;
+    width: 35%;
+}
+
+.rodape-contato {
+    clear: both;
+}
+
+.secoes-contato p {
+    padding: 20px 0;
+    margin: 30px 20px;
+    text-align: center;
+}
+
+.input-contato {
+    width: 100%;
+    height: 7vh;
+    margin-bottom: 3vh;
+    border-radius: 20px;
+    padding-left: 10px;
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+.textarea-contato {
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px 3px 3px 10px;
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+.input-contato::placeholder,
+.textarea-contato::placeholder {
+    color: #222222;
 }
