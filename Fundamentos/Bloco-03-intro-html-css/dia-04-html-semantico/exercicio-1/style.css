@@ -437,10 +437,10 @@ a:visited {
 
 .btn-enviar {
     background-color: #fc0;
-    padding: 10px 222px;
+    padding: 1% 15.5%;
     border-radius: 20px;
     position: absolute;
-    top: 160vh;
+    top: 122vh;
     text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
@@ -451,4 +451,19 @@ a:visited {
 .btn-enviar:visited,
 .btn-enviar:active {
     color: #222222;
+}
+
+.btn-enviar:hover {
+    transition: 0.8s;
+    background-color: transparent;
+    color: #fc0;
+    border: 2px solid #fc0;  
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 204, 0, 0.533);
+    border-radius: 30px;
 }
