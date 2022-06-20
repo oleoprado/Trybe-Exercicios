@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Stomatopoda</title>
+</head>
+
+<body>
+    <header>
+        <section class="titulo-header">
+            <div class="img-header"></div>
+            <h1>SOCO A 80km/h</h1>
+            <h2>CONHEÇA O STOMATOPODA</h2>
+        </section>
+        <section id="menu">
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="./index.html">Página Inicial</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
+                    <li><a href="./contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <section class="form-contato">
+            <div class="secoes secoes-contato">
+                <h2>contato</h2>
+                <p>Preencha nosso formulário de contato e retornaremos o mais breve possível</p>
+            </div>
+            <div class="form">
+                <form>
+                    <fieldset class="fieldset-contato">
+                        <input class="input-contato" type="text" id="nome" name="nome" placeholder="Enter your Name"><br>
+                        <input class="input-contato" type="email" id="email" name="email" placeholder="Enter a valid email address"><br>
+                        <textarea class="textarea-contato" name="mensagem" rows="10" cols="30" placeholder="write your doubts lives, suggestions, complaints"></textarea>
+                    </fieldset>
+                </form>
+                <a href="#" class="btn-enviar">enviar</a>
+            </div>
+
+        </section>
+        <section class="endereco">
+            <div class="secoes secoes-contato">
+                <h2>endereço</h2>
+                <p>Praça do Comércio, 3 - Sala 42-1149-010 - Lisboa<br>Telfone +351 912 263 964</p>
+            </div>
+            <div class="mapa">
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe width="600" height="500" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=pra%C3%A7a%20do%20comertcio&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0" class="iframe-maps">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="rodape rodape-contato">
+        <div class="content-rodape">
+            <small>
+                <p>Conteúdo compilado por <strong>Leonardo Prado</strong>, 2022.</p>
+            </small>
+        </div>
+    </footer>
+</body>

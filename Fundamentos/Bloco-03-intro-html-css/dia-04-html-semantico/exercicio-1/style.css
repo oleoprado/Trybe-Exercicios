@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Blaka&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: #222222;
+}
+
+header {
+    text-align: center;
+}
+
+.titulo-header {
+    color: #fc0;
+    background-color: #222222;
+    padding: 30px 0 40px 0;
+    font-family: 'Bungee Shade', 'cursive';
+    font-size: 2em;
+
+}
+
+#nav-menu {
+    background-color: #fc0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    border-radius: 20px;
+}
+
+#nav-menu a {
+    color: #3C3C3B;
+}
+
+#nav-menu a:hover {
+    color: #1446A0;
+}
+
+#nav-menu ul li {
+    display: inline-block;
+    padding: 10px 40px 10px 40px;
+    text-transform: uppercase;
+}
+
+/* .img-header {
+    background-image: url(./img/img-6.jpg);
+    background-repeat: round;
+    background-size: contain;
+    background-position: 50% -10%;
+    width: 10%;
+    height: 140px;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    border-radius: 30%;
+} */
+
+#aside {
+    position: absolute;
+    width: 20%;
+    height: 45%;
+    /* border: 4px solid blue; */
+    right: 0%;
+    top: 61%;
+    margin-right: 5px;
+    border-radius: 20px;
+    background-color: #000;
+    padding: 0 8px;
+}
+
+iframe {
+    width: 100%;
+    height: 230px;
+}
+
+.video-aside h3 {
+    padding: 15px 5px 0 5px;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #fc0;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+.secoes p,
+.secoes h2,
+.secoes h3 {
+    margin: 0 20%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.secoes h2,
+.secoes h3 {
+    text-align: center;
+    font-size: 2em;
+    padding-top: 60px;
+    text-transform: uppercase;
+    color: #fc0;
+}
+
+.secoes p {
+    text-align: left;
+    font-size: 1.1em;
+    line-height: 25px;
+    padding-top: 40px;
+    color: #d7d7d7;
+}
+
+.secoes p strong {
+    color: #fc0;
+}
+
+.container-sobre {
+    /* border: 1px solid red; */
+    height: 680px;
+    margin: 3% 20% 0 20%;
+    position: relative;
+}
+
+#img-container {
+    width: 75%;
+    height: 55%;
+    position: absolute;
+    left: 7vw;
+    border-radius: 50px;
+}
+
+.carrossel {
+    position: relative;
+    max-width: 100%;
+    height: 300px;
+    /* border: 2px solid red; */
+    top: 56%;
+    padding-top: 30px;
+}
+
+.img-01 {
+    background-image: url(./img/img-01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 32%;
+    height: 85%;
+    /* border: 2px solid black; */
+    position: absolute;
+    left: 68%;
+    border-radius: 50%;
+}
+
+.img-02 {
+    background-image: url(./img/img-02.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 32%;
+    height: 85%;
+    /* border: 2px solid black; */
+    position: absolute;
+    left: 34%;
+    border-radius: 50%;
+
+}
+
+.img-03 {
+    background-image: url(./img/img-03.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 32%;
+    height: 85%;
+    /* border: 2px solid black; */
+    position: absolute;
+    border-radius: 50%;
+}
+
+.tabela-classificacao {
+    margin: 6% 0 2% 40%;
+    width: 20%;
+    /* border: 2px solid red; */
+    font-family: 'Montserrat', sans-serif;
+}
+
+table,
+th,
+tr,
+td {
+    border: 3px solid #d7d7d7;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+table th {
+    background-color: #fc0;
+    color: #525252;
+}
+
+table a:link,
+#defesa-ataque a:link {
+    color: orange;
+}
+
+table a:visited,
+#defesa-ataque a:visited {
+    color: #fc0;
+}
+
+table a:hover,
+#defesa-ataque a:hover {
+    color: orange;
+}
+
+table a:active {
+    color: #fc0;
+}
+
+.tb-bold {
+    font-weight: 600;
+    text-align: justify;
+    padding-left: 10px;
+    color: #fc0;
+}
+
+.tb-left {
+    text-align: justify;
+    padding-left: 10px;
+    color: #fc0;
+}
+
+#container-visao {
+    height: 480px;
+    /* border: 2px solid red; */
+    margin: 60px 20% 0 20%;
+    position: relative;
+}
+
+.img-visao-3 {
+    background-image: url(./img/img-05.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 100%;
+    width: 50%;
+    height: 450px;
+    /* border: 2px solid #fc0; */
+    margin-left: 1%;
+    border-radius: 25px;
+}
+
+.img-visao-2 {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXWfbkqoMVSoxe8Hef6dPmzB7TibEU0PJvYQ&usqp=CAU);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 0%;
+    width: 45%;
+    height: 40%;
+    /* border: 2px solid #fc0; */
+    position: absolute;
+    left: 54%;
+    border-radius: 25px;
+}
+
+.img-visao-1 {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Y8_ln-HtCuwkZD5KLrrR40fdxkrlUdrMwA&usqp=CAU);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 40% 50%;
+    width: 45%;
+    height: 40%;
+    /* border: 1px solid #fc0; */
+    position: absolute;
+    left: 54%;
+    top: 54%;
+    border-radius: 25px;
+}
+
+#container-defesa {
+    height: 960px;
+    /* border: 2px solid red; */
+    margin: 30px 20% 0 20%;
+    position: relative;
+}
+
+.img-defesa-1 {
+    background-image: url(https://www.aquaa3.com.br/wp-content/uploads/2020/09/animal-mais-forte-mundo-1024x734.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 95%;
+    height: 50%;
+    margin-left: 2%;
+    border-radius: 25px 25px 0 0;
+}
+
+.img-defesa-2 {
+    background-image: url(https://www.aquaa3.com.br/wp-content/uploads/2020/09/Animal-mais-rapido-1024x734.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    width: 95%;
+    height: 50%;
+    margin-left: 2%;
+    border-radius: 0 0 25px 25px;
+}
+
+#familias ul li {
+    margin-left: 42%;
+    list-style: none;
+    line-height: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+    color: #d7d7d7;
+    font-weight: 600;
+    display: inline-block;
+    width: 11%;
+    text-align: justify;
+}
+
+#familias ul {
+    padding-top: 2%;
+    margin: 0 20%;
+}
+
+#referencias a:link,
+a:visited {
+    color: #d7d7d7;
+}
+
+#referencias a:hover {
+    color: #fc0;
+}
+
+#referencias ol {
+    padding: 3% 0 1% 0;
+    margin: 0 20%;
+    line-height: 20px;
+    list-style-position: inside;
+}
+
+#referencias ol li {
+    text-align: start;
+}
+
+#referencias li::marker {
+    color: #fc0;
+}
+
+.content-rodape {
+    border-top: 2px solid #fc0;
+    border-radius: 20px;
+    height: 30px;
+    text-align: center;
+    padding: 10px 0;
+    color: #d7d7d7;
+}
+
+.content-rodape strong {
+    color: #fc0;
+}
+
+/* página sobre */
+
+#sobre-container {
+    padding-bottom: 10%;
+}
+
+/* página contato */
+
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 292px;
+    width: 504px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 291px;
+    width: 504px;
+    position: absolute;
+}
+
+.iframe-maps {
+    width: 50vw;
+    height: 55vh;
+}
+
+.endereco {
+    float: right;
+    margin: 70px 120px 10% 0;
+}
+
+.fieldset-contato {
+    border: none;
+}
+
+.form-contato {
+    float: left;
+    margin: 70px 0 0 120px;
+    width: 35%;
+}
+
+.rodape-contato {
+    clear: both;
+}
+
+.secoes-contato p {
+    padding: 20px 0;
+    margin: 30px 20px;
+    text-align: center;
+}
+
+.input-contato {
+    width: 100%;
+    height: 7vh;
+    margin-bottom: 3vh;
+    border-radius: 20px;
+    padding-left: 10px;
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+.textarea-contato {
+    width: 100%;
+    border-radius: 20px;
+    padding: 10px 3px 3px 10px;
+    font-family: 'Montserrat', 'sans-serif';
+}
+
+.input-contato::placeholder,
+.textarea-contato::placeholder {
+    color: #222222;
+}
+
+.btn-enviar {
+    background-color: #fc0;
+    padding: 1% 15.5%;
+    border-radius: 20px;
+    position: absolute;
+    top: 122vh;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: #222222;
+}
+
+.btn-enviar:link,
+.btn-enviar:visited,
+.btn-enviar:active {
+    color: #222222;
+}
+
+.btn-enviar:hover {
+    transition: 0.8s;
+    background-color: transparent;
+    color: #fc0;
+    border: 2px solid #fc0;  
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 204, 0, 0.533);
+    border-radius: 30px;
+}

@@ -1,0 +1,50 @@
+h1 {
+    text-align: center;
+}
+
+.first {
+    background-color: rgb(235, 200, 84);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 200px;
+    display: block;
+    margin-left: 43%;
+}
+
+.second {
+    background-color: rgb(219, 219, 219);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+    display: inline-block;
+    margin-left: 30%;
+}
+
+.third {
+    background-color: rgb(170, 142, 106);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+    display: inline-block;
+    margin-right: 3s0%;
+}
+
+ul li {
+    list-style: none;
+}
+
+.premiacoes {
+    display: inline-block;
+    margin-left: 750px;
+}
+
+.premiacao ul li {
+    display: inline-block;
+}
+
+.premiacao ul {
+    margin-left: 500px;
+}
