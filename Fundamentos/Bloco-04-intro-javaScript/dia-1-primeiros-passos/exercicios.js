@@ -98,9 +98,9 @@ if (nota < 0 || nota > 100) {
 const ehPar1 = 20;
 const ehPar2 = 5;
 const ehPar3 = 12;
-  
 
-if ( ehPar1 % 2 === 0 || ehPar2 % 2 === 0 || ehPar3 % 2 === 0) {
+
+if (ehPar1 % 2 === 0 || ehPar2 % 2 === 0 || ehPar3 % 2 === 0) {
     console.log(true);
 } else {
     console.log(false);
@@ -133,4 +133,42 @@ if (valorCusto >= 0 && valorProduto >= 0) {
 }
 
 //11
+const salarioBruto = 7000;
+let aliquotaInss;
+let aliquotaIr;
 
+if (salarioBruto > 0 && salarioBruto <= 1556.94) {
+    aliquotaInss = (salarioBruto * 0.08);
+    console.log("Aliquota de 8% - desconto INSS de R$" + aliquotaInss.toFixed(2));
+} else if (salarioBruto <= 2594.92) {
+    aliquotaInss = (salarioBruto * 0.09);
+    console.log("Aliquota de 9% - desconto INSS de R$" + aliquotaInss.toFixed(2));
+} else if (salarioBruto <= 5189.82) {
+    aliquotaInss = (salarioBruto * 0.11);
+    console.log("Aliquota de 11% - desconto INSS de R$" + aliquotaInss.toFixed(2));
+} else {
+    aliquotaInss = 570.88
+    console.log("Aliquota máxima de R$570.88 - desconto INSS de R$" + aliquotaInss.toFixed(2));
+} 
+
+const salarioBase = (salarioBruto - aliquotaInss);
+
+if (salarioBase > 0 && salarioBase <= 1903.98) {
+    aliquotaIr = 0;
+    console.log("Isento de IR");
+} else if (salarioBase <= 2826.65) {
+    aliquotaIr = ((salarioBase * 0.075) - 142.80);
+    console.log("Aliquota 7,5% - desconto IR de R$" + aliquotaIr.toFixed(2));
+} else if (salarioBase <= 3751.05) {
+    aliquotaIr = ((salarioBase * 0.15) - 354.80);
+    console.log("Aliquota 15% - desconto IR de R$" + aliquotaIr.toFixed(2));
+} else if (salarioBase <= 4664.68) {
+    aliquotaIr = ((salarioBase * 0.225) - 636.13);
+    console.log("Aliquota 22.5% - desconto IR de R$" + aliquotaIr.toFixed(2));
+} else {
+    aliquotaIr = ((salarioBase * 0.275) - 869.36);
+    console.log("Aliquota 27.5% - desconto IR de R$" + aliquotaIr.toFixed(2));
+}
+
+const salarioLiquido = (salarioBase - aliquotaIr.toFixed(2));
+console.log("Salario liquido: R$ " + salarioLiquido);
