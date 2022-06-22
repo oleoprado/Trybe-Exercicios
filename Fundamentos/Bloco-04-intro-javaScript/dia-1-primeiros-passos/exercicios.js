@@ -74,3 +74,63 @@ switch (pecaXadrez.toLocaleLowerCase()) {
     default:
         console.log('Error: Peça inválida');
 }
+
+//7
+const nota = 49;
+
+if (nota < 0 || nota > 100) {
+    console.log("Error: Nota inválida");
+} else if (nota >= 90) {
+    console.log("Nota A");
+} else if (nota >= 80) {
+    console.log("Nota B");
+} else if (nota >= 70) {
+    console.log("Nota C");
+} else if (nota >= 60) {
+    console.log("Nota D");
+} else if (nota >= 50) {
+    console.log("Nota E");
+} else {
+    console.log("Nota F");
+}
+
+//8
+const ehPar1 = 20;
+const ehPar2 = 5;
+const ehPar3 = 12;
+  
+
+if ( ehPar1 % 2 === 0 || ehPar2 % 2 === 0 || ehPar3 % 2 === 0) {
+    console.log(true);
+} else {
+    console.log(false);
+}
+
+//9
+const ehImpar1 = 13;
+const ehImpar2 = 10;
+const ehImpar3 = 7;
+
+let ehImpar = false;
+
+if (ehImpar1 % 2 !== 0 || ehImpar2 % 2 !== 0 || ehImpar3 % 2 !== 0) {
+    ehImpar = true;
+} else {
+    ehImpar = false;
+}
+console.log(ehImpar)
+
+//10
+const valorCusto = 4;
+const valorProduto = 20;
+
+if (valorCusto >= 0 && valorProduto >= 0) {
+    const custoTotal = valorCusto * 0.2;
+    const lucroTotal = (valorProduto - custoTotal) * 1000;
+    console.log(lucroTotal);
+} else {
+    console.log("Error: valor de entrada menor que 0");
+}
+
+//11
+
