@@ -18,7 +18,7 @@ for (let i = word.length -1; i >= 0; i -= 1) {
 console.log(invertWord);
 
 //3-Escreva dois algoritmos: um que retorne a maior palavra deste array e outro que retorne a menor. Considere o número de caracteres de cada palavra.
-let array = ['java', 'javascript', 'python', 'html', 'css'];
+let array = ['java', 'javascript', 'python', 'html', 'css', 'c'];
 let maiorPalavra = array[0]; 
 let menorPalavra = array[0]; 
 
@@ -27,5 +27,24 @@ for (let index = 0; index < array.length; index +=1) {
     maiorPalavra = array[index];
   }
 }
+console.log("A maior palavra do array é: " + maiorPalavra);
 
-console.log(maiorPalavra);
+for (let index2 = 0; index2 < array.length; index2 += 1) {
+  if (array[index2].length < menorPalavra.length) {
+    menorPalavra = array[index2];
+  }
+}
+console.log("A menor palavra do array é: " + menorPalavra);
+
+//4-escreva um algoritmo que retorne o maior número primo entre 2 e 50.
+// let ehPrimo = [];
+let maiorNumeroPrimo = 0;
+for (let numeroAtual = 2; numeroAtual <= 50; numeroAtual += 1) {
+  let ehPrimo = true;
+  for (let divisorAtual = 2; divisorAtual < numeroAtual; divisorAtual += 1) {
+    if (numeroAtual % divisorAtual === 0) {
+      ehPrimo = false;
+    }
+  }
+  
+}
