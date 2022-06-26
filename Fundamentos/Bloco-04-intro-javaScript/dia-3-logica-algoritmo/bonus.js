@@ -8,3 +8,13 @@ for (let linha = 1; linha <= n; linha += 1) {
   }
   console.log(quadrado);
 }
+
+//2-faça o mesmo que antes, mas que imprima um triângulo retângulo com 5 asteriscos de base.
+let num = 5;
+for (let row = 1; row <= num; row +=1){
+  let trinagulo = "";
+  for (let col = 1; col <= row; col += 1) {
+    trinagulo += "*"
+  }
+  console.log(trinagulo);
+}
