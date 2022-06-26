@@ -48,3 +48,75 @@ for (let key in car) {
 
 //FUNÇÕES
 
+// Refatorar os exercícios de 1 a 5 do dia 4.1 e faça que eles sejam funções de um mesmo arquivo.
+
+//1-(REFATORADO)Faça cinco programas, um para cada operação aritmética básica. Seu programa deve ter duas constantes, a e b, definidas no começo com os valores que serão operados
+function soma(a, b) {
+  let resultado = "Resultado da soma: " + (a + b);
+  return resultado;
+}
+function subtracao(a, b) {
+  let resultado = "Resultado da subtração: " + (a - b);
+  return resultado;
+}
+function multiplicacao(a, b) {
+  let resultado = "Resultado da multiplicacao: " + (a * b);
+  return resultado;
+}
+function divisao(a, b) {
+  let resultado = "Resultado da divisao: " + (a / b);
+  return resultado;
+}
+function modulo(a, b) {
+  let resultado = "Resultado do modulo de divisão: " + (a % b);
+  return resultado;
+}
+
+//2-(REFATORADO)Faça um programa que retorne o maior de dois números
+function mostraMaiorNumero(num1, num2) {
+  if (num1 > num2) {
+    let resultado = num1 + " é maior que " + num2;
+    return resultado;
+  } else {
+    resultado = num2 + " é maior que " + num1;
+    return resultado;
+  }
+}
+
+//3-(REFATORADO)Faça um programa que retorne o maior de três números
+function qualMaiorNumero(num1, num2, num3) {
+  if (num1 > num2 && num1 > num3) {
+    return num1;
+  } else if (num2 > num1 && num2 > num3) {
+    return num2;
+  } else {
+    return num3;
+  }
+}
+
+//4-(REFATORADO) dado um valor definido numa constante, retorne "positive" se esse valor for positivo, "negative" se for negativo e "zero", caso contrário.
+function verificaNumPositivoNegativo(num) {
+  if (num > 0) {
+    return console.log("É um valor positive");
+  } else if (num < 0) {
+    return console.log("é um valor negative");
+  } else {
+    return console.log("zero")
+  }
+}
+
+//5-defina três constantes com os valores dos três ângulos internos de um triângulo. Retorne true se os ângulos representarem os ângulos de um triângulo e false, caso contrário. Se algum ângulo for inválido o programa deve retornar uma mensagem de erro. 
+function verificaAnguloTriangulo(ladoA, ladoB, ladoC) {
+  let somaDosLados = ladoA + ladoB + ladoC;
+  let angulosPositivos = ladoA > 0 && ladoB > 0 && ladoC > 0;
+  
+  if (angulosPositivos) {
+    if (somaDosLados === 180) {
+     return console.log(true);
+    } else {
+     return console.log(false);
+    }
+  } else {
+    return console.log("Valor do angulo inválido")
+  }
+}
