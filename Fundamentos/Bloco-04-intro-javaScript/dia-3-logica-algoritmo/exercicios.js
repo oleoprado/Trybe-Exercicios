@@ -3,7 +3,7 @@
 let fatorial = 10;
 let resultado = fatorial;
 
-for (let i = 9; i > 0; i -= 1) {
-  resultado *= i;
+for (let index = fatorial -1; index > 0; index -= 1) {
+  resultado *= index;
 }
 console.log(resultado)
