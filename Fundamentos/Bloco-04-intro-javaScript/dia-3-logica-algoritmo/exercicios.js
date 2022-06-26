@@ -39,6 +39,7 @@ console.log("A menor palavra do array é: " + menorPalavra);
 //4-escreva um algoritmo que retorne o maior número primo entre 2 e 50.
 // let ehPrimo = [];
 let maiorNumeroPrimo = 0;
+let arrayPrimos = [];
 for (let numeroAtual = 2; numeroAtual <= 50; numeroAtual += 1) {
   let ehPrimo = true;
   for (let divisorAtual = 2; divisorAtual < numeroAtual; divisorAtual += 1) {
@@ -46,5 +47,10 @@ for (let numeroAtual = 2; numeroAtual <= 50; numeroAtual += 1) {
       ehPrimo = false;
     }
   }
-  
+  if (ehPrimo) {
+    arrayPrimos.push(numeroAtual);
+    maiorNumeroPrimo = numeroAtual;
+  }
 }
+console.log("Todos os números primos de 2 a 50: " + arrayPrimos);
+console.log("O maior número primo entre 2 a 50: " + maiorNumeroPrimo);
