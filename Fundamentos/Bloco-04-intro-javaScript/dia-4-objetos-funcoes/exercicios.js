@@ -1,3 +1,4 @@
+//OBJETOS E FOR IN
 //1 - Imprima no console uma mensagem de boas-vindas para a personagem acima, incluindo seu nome. Valor esperado no console:
 let info = {
   personagem: 'Margarida',
@@ -59,3 +60,12 @@ leitor.livrosFavoritos.push({titulo: 'Harry Potter e o Prisioneiro de Azkaban', 
 
 //8 - Acesse as chaves nome e livrosFavoritos e faça um console.log no seguinte formato: "Julia tem 2 livros favoritos".
 console.log(leitor.nome + " tem " + leitor.livrosFavoritos.length + " livros favoritos");
+
+//FUNÇÕES
+//1- Crie uma função que receba uma string e retorne true se for um palíndromo, ou false
+function verificaPalindromo (palavra) {
+  for (let index = palavra -1; index <= palavra.length; index -= 1) {
+    console.log(index);
+  }
+
+}
