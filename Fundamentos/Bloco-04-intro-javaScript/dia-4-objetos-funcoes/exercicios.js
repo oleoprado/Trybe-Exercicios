@@ -110,4 +110,3 @@ function maiorQuantidadeCaracteres (array) {
 }
 
 console.log(maiorQuantidadeCaracteres(['leonardo', 'ju', 'pindamonhangaba']))
-
