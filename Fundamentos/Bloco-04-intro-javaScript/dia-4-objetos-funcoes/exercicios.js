@@ -63,9 +63,51 @@ console.log(leitor.nome + " tem " + leitor.livrosFavoritos.length + " livros fav
 
 //FUNÇÕES
 //1- Crie uma função que receba uma string e retorne true se for um palíndromo, ou false
-function verificaPalindromo (palavra) {
-  for (let index = palavra -1; index <= palavra.length; index -= 1) {
-    console.log(index);
+function verificaPalindromo (string) {
+  if (string === string.split('').reverse().join('')) {
+    return true;
+  } else {
+    return false;
   }
-
 }
+verificaPalindromo('ovo');
+
+//2- Crie uma função que receba um array de inteiros e retorne o índice do maior valor.
+function indiceMaior(array) {
+  let indiceMaior = 0;
+  for (let index in array) {
+    if (array[indiceMaior] <  array[index]) {
+      indiceMaior = index;
+    }
+  }
+  return indiceMaior;
+}
+
+console.log(indiceMaior([1,2,5,10,12,234]))
+
+//3-Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
+function verificaIndiceMenor(array) {
+  let indiceMenor = 0;
+  for (let index in array) {
+    if (array[indiceMenor] > array[index]) {
+      indiceMenor = index;
+    }
+  }
+  return indiceMenor;
+}
+
+console.log(verificaIndiceMenor([10, 34, 25, 3, 98, 20]))
+
+//4- Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+function maiorQuantidadeCaracteres (array) {
+  let maiorQuantidade = [0];
+  for (let index = 0; index < array; index += 1) {
+    if (array[index].length > maiorQuantidade.length) {
+      maiorQuantidade += array[index];
+      return maiorQuantidade;
+    }
+  }
+}
+
+console.log(maiorQuantidadeCaracteres(['leonardo', 'ju', 'pindamonhangaba']))
+
