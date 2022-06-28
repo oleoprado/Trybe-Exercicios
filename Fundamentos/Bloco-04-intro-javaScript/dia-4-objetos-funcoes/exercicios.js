@@ -108,5 +108,21 @@ function maiorQuantidadeCaracteres(array) {
   }
   return maiorString;
 }
-
 console.log(maiorQuantidadeCaracteres(['a', 'ab','abcdsdsdasdasdsd', 'abc', 'abcd']));
+
+//5 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+//Array de teste: [2, 3, 2, 5, 8, 2, 3];.
+//Valor esperado no retorno da função: 2.
+function maisSeRepete (arrNum) {
+
+}
+
+//6-Crie uma função que receba um número natural (número inteiro não negativo) N e retorne o somatório de todos os números de 1 até N.
+function somatoriaDo1ateNum (num) {
+  let soma = 0;
+  for (let i = 1; i <= num; i += 1) {
+    soma += i;
+  }
+  return soma;
+}
+console.log(somatoriaDo1ateNum(5));
