@@ -63,6 +63,7 @@ console.log(leitor.nome + " tem " + leitor.livrosFavoritos.length + " livros fav
 
 //FUNÇÕES
 //1- Crie uma função que receba uma string e retorne true se for um palíndromo, ou false
+
 function verificaPalindromo (string) {
   if (string === string.split('').reverse().join('')) {
     return true;
@@ -99,6 +100,34 @@ function verificaIndiceMenor(array) {
 console.log(verificaIndiceMenor([10, 34, 25, 3, 98, 20]))
 
 //4- Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+
+function maiorQuantidadeCaracteres(array) {
+  let maiorString = '';
+  for (count of array) {
+    if (count.length > maiorString.length) {
+      maiorString = count;
+    }
+  }
+  return maiorString;
+}
+console.log(maiorQuantidadeCaracteres(['a', 'ab','abcdsdsdasdasdsd', 'abc', 'abcd']));
+
+//5 - Crie uma função que receba um array de inteiros e retorne o inteiro que mais se repete.
+//Array de teste: [2, 3, 2, 5, 8, 2, 3];.
+//Valor esperado no retorno da função: 2.
+function maisSeRepete (arrNum) {
+
+}
+
+//6-Crie uma função que receba um número natural (número inteiro não negativo) N e retorne o somatório de todos os números de 1 até N.
+function somatoriaDo1ateNum (num) {
+  let soma = 0;
+  for (let i = 1; i <= num; i += 1) {
+    soma += i;
+  }
+  return soma;
+}
+console.log(somatoriaDo1ateNum(5));
 function maiorQuantidadeCaracteres (array) {
   let maiorQuantidade = [0];
   for (let index = 0; index < array; index += 1) {
