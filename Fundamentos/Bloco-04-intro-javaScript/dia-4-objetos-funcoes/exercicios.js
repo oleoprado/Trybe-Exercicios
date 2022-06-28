@@ -55,7 +55,7 @@ let leitor = {
 // console.log("O livro favorito de " + leitor.nome + " " + leitor.sobrenome + " se chama " + leitor.livrosFavoritos[0].titulo);
 
 //7-Adicione um novo livro favorito na chave livrosFavoritos, que é um array. Atribua a esta chave um objeto contendo as seguintes
-leitor.livrosFavoritos.push({ titulo: 'Harry Potter e o Prisioneiro de Azkaban', autor: 'JK Rowling', editora: 'Rocco' });
+leitor.livrosFavoritos.push({titulo: 'Harry Potter e o Prisioneiro de Azkaban', autor: 'JK Rowling', editora: 'Rocco'});
 // console.log(leitor.livrosFavoritos[1]);
 
 //8 - Acesse as chaves nome e livrosFavoritos e faça um console.log no seguinte formato: "Julia tem 2 livros favoritos".
@@ -63,7 +63,8 @@ console.log(leitor.nome + " tem " + leitor.livrosFavoritos.length + " livros fav
 
 //FUNÇÕES
 //1- Crie uma função que receba uma string e retorne true se for um palíndromo, ou false
-function verificaPalindromo(string) {
+
+function verificaPalindromo (string) {
   if (string === string.split('').reverse().join('')) {
     return true;
   } else {
@@ -76,14 +77,14 @@ verificaPalindromo('ovo');
 function indiceMaior(array) {
   let indiceMaior = 0;
   for (let index in array) {
-    if (array[indiceMaior] < array[index]) {
+    if (array[indiceMaior] <  array[index]) {
       indiceMaior = index;
     }
   }
   return indiceMaior;
 }
 
-console.log(indiceMaior([1, 2, 5, 10, 12, 234]))
+console.log(indiceMaior([1,2,5,10,12,234]))
 
 //3-Crie uma função que receba um array de inteiros e retorne o índice do menor valor.
 function verificaIndiceMenor(array) {
@@ -99,6 +100,7 @@ function verificaIndiceMenor(array) {
 console.log(verificaIndiceMenor([10, 34, 25, 3, 98, 20]))
 
 //4- Crie uma função que receba um array de nomes e retorne o nome com a maior quantidade de caracteres.
+
 function maiorQuantidadeCaracteres(array) {
   let maiorString = '';
   for (count of array) {
@@ -126,3 +128,14 @@ function somatoriaDo1ateNum (num) {
   return soma;
 }
 console.log(somatoriaDo1ateNum(5));
+function maiorQuantidadeCaracteres (array) {
+  let maiorQuantidade = [0];
+  for (let index = 0; index < array; index += 1) {
+    if (array[index].length > maiorQuantidade.length) {
+      maiorQuantidade += array[index];
+      return maiorQuantidade;
+    }
+  }
+}
+
+console.log(maiorQuantidadeCaracteres(['leonardo', 'ju', 'pindamonhangaba']))
