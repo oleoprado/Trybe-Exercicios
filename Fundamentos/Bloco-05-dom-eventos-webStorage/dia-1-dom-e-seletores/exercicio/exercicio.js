@@ -30,3 +30,10 @@
   section.style.backgroundColor = cor;
  }
 mudaCorSection('white')
+
+//4
+function corrigeTexto (texto) {
+  const tituloPagina = document.getElementsByClassName('title')[0];
+  tituloPagina.innerText = texto;
+}
+corrigeTexto('Exercício 5.1 - JavaScript')
