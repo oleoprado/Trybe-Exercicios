@@ -37,3 +37,5 @@ function corrigeTexto (texto) {
   tituloPagina.innerText = texto;
 }
 corrigeTexto('Exercício 5.1 - JavaScript')
+
+//5 
