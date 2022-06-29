@@ -23,3 +23,10 @@
   containerMain.style.backgroundColor = cor;
  }
  mudaCorMain('rgb(76,164,109)')
+
+ //3
+ function mudaCorSection (cor) {
+  const section = document.getElementsByClassName('center-content')[0];
+  section.style.backgroundColor = cor;
+ }
+mudaCorSection('white')
