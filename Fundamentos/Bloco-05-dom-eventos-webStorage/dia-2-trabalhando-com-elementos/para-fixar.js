@@ -12,3 +12,33 @@ document.getElementById('pai').childNodes[5];
 
 //CRIANDO ELEMENTOS
 //1 
+const irmaoOndeVoceEsta = document.createElement('section');
+irmaoOndeVoceEsta.setAttribute('id', 'irmaoDoOndeVoceEsta');
+ondeVoceEsta.parentNode.insertBefore(irmaoOndeVoceEsta, ondeVoceEsta.nextSibling);
+
+//2
+const filhoOndeVoceEsta = document.createElement('section');
+filhoOndeVoceEsta.setAttribute('id', 'filho-onde-esta');
+ondeVoceEsta.appendChild(filhoOndeVoceEsta);
+
+//3
+const primeiroFilhodoFilho = document.getElementById('primeiroFilhoDoFilho');
+const filhoDoPrimeiroFilhoDoFilho = document.createElement('section');
+filhoDoPrimeiroFilhoDoFilho.setAttribute('id', 'filhoDoPrimeiroFilhoDoFilho');
+primeiroFilhodoFilho.appendChild(filhoDoPrimeiroFilhoDoFilho);
+
+//4
+filhoDoPrimeiroFilhoDoFilho.parentElement.parentElement.nextSibling.nextSibling.nextSibling;
+
+//REMOVENDO ELEMENTOS
+const pai = document.getElementById('pai');
+
+for (let i = pai.childNodes.length -1; i >= 0; i -= 1) {
+  const currentChildren = pai.childNodes[i];
+  if (currentChildren.id !== 'elementoOndeVoceEsta') {
+    currentChildren.remove();
+  }
+}
+
+const segundoEUltimoFilhoDoFilho = document.getElementById('segundoEUltimoFilhoDoFilho');
+segundoEUltimoFilhoDoFilho.remove();
