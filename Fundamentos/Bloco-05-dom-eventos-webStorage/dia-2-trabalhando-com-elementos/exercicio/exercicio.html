@@ -89,7 +89,24 @@
       adicionaImg.src = 'https://picsum.photos/200';
       adicionaSectionLeft.appendChild(adicionaImg);
       //8-----------------------------------------------------------------
-      
+      let listaNaoOrdenada = ['um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez']
+      const ul = document.createElement('ul');
+
+      for (let index = 0; index < listaNaoOrdenada.length; index += 1) {
+        let lista = listaNaoOrdenada[index];
+        
+        let li = document.createElement('li');
+        li.innerText = lista;
+
+        ul.appendChild(li);
+      }
+      adicionaSectionRight.appendChild(ul);
+
+      //9-----------------------------------------------------------------
+      for (let i = 1; i <= 3; i+=1) {
+        const h3 = document.createElement('h3');
+        adicionaMain.appendChild(h3);
+      }
       
     </script>
   </body>
