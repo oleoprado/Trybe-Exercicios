@@ -57,7 +57,40 @@
   </head>
   <body>
     <script>
-      // COLOQUE SEU CÓDIGO AQUI
+      //1-----------------------------------------------------------------
+      const body = document.getElementsByTagName("body")[0];
+      const adicionaH1 = document.createElement("h1");
+      adicionaH1.className = 'title';
+      adicionaH1.innerText = 'Exercício 5.2 - JavaScript DOM'
+      body.appendChild(adicionaH1);
+      //2-----------------------------------------------------------------
+      const adicionaMain = document.createElement('main');
+      adicionaMain.className = 'main-content';
+      body.appendChild(adicionaMain);
+      //3-----------------------------------------------------------------
+      const adicionaSection = document.createElement('section');
+      adicionaSection.className = 'center-content';
+      adicionaMain.appendChild(adicionaSection);
+      //4-----------------------------------------------------------------
+      const adicionaParagrafo = document.createElement('p');
+      adicionaParagrafo.innerText = 'Mussum Ipsum, cacilds vidis litro abertis. Quem manda na minha terra sou euzis!Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi.Viva Forevis aptent taciti sociosqu ad litora torquent.Suco de cevadiss deixa as pessoas mais interessantis.'
+      adicionaSection.appendChild(adicionaParagrafo);
+      //5-----------------------------------------------------------------
+      const adicionaSectionLeft = document.createElement('section');
+      adicionaSectionLeft.className = 'left-content';
+      adicionaMain.appendChild(adicionaSectionLeft);
+      //6-----------------------------------------------------------------
+      const adicionaSectionRight = document.createElement('section');
+      adicionaSectionRight.className = 'right-content';
+      adicionaMain.appendChild(adicionaSectionRight);
+      //7-----------------------------------------------------------------
+      const adicionaImg = document.createElement('img');
+      adicionaImg.className = 'small-image';
+      adicionaImg.src = 'https://picsum.photos/200';
+      adicionaSectionLeft.appendChild(adicionaImg);
+      //8-----------------------------------------------------------------
+      
+      
     </script>
   </body>
 </html>
