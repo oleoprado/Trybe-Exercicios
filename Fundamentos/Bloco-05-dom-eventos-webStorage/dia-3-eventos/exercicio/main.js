@@ -40,4 +40,13 @@ function createDecemberDays() {
 }
 createDecemberDays();
 
-//2 
+//2
+function createButtonHolidays (nameButton) {
+  const btnHolidays = document.querySelector('.buttons-container');
+  const btnFeriados = document.createElement('button');
+  btnFeriados.setAttribute('id', 'btn-holiday');
+  btnFeriados.innerText = nameButton;
+
+  btnHolidays.appendChild(btnFeriados);
+}
+createButtonHolidays('Feriados');
