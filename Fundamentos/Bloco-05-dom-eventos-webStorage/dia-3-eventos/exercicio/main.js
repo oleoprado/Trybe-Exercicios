@@ -41,7 +41,7 @@ function createDecemberDays() {
 createDecemberDays();
 
 //2
-function createButtonHolidays (nameButton) {
+function createButtonHolidays(nameButton) {
   const btnHolidays = document.querySelector('.buttons-container');
   const btnFeriados = document.createElement('button');
   btnFeriados.setAttribute('id', 'btn-holiday');
@@ -50,3 +50,35 @@ function createButtonHolidays (nameButton) {
   btnHolidays.appendChild(btnFeriados);
 }
 createButtonHolidays('Feriados');
+
+//3
+function changeBackgroundColorHolidays() {
+  const pegarBtnHolidays = document.querySelector('#btn-holiday');
+  const holidays = document.querySelectorAll('.holiday');
+  const backgroundColor = 'rgb(238,238,238)';
+  const newBackgroundColor = 'green';
+
+  pegarBtnHolidays.addEventListener('click', function () {
+    for (let i = 0; i < holidays.length; i++) {
+      if (holidays[i].style.backgroundColor === newBackgroundColor) {
+        holidays[i].style.backgroundColor = backgroundColor;
+        holidays[i].style.color = '#666';
+      } else {
+        holidays[i].style.backgroundColor = newBackgroundColor;
+        holidays[i].style.color = 'rgb(238,238,238)';
+      }
+    }
+  })
+}
+changeBackgroundColorHolidays();
+
+//4 
+function createBtnFridays (nameButton) {
+  const btnFridays = document.querySelector('.buttons-container');
+  const btnFriday = document.createElement('button');
+  btnFriday.id = 'btn-friday';
+  btnFriday.innerText = nameButton;
+
+  btnFridays.appendChild(btnFriday);
+}
+createBtnFridays('Sexta-Feira');
