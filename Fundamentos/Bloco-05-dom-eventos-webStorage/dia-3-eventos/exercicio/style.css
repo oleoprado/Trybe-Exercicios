@@ -38,8 +38,9 @@ button {
 
 #days .diaZoom {
   font-size: 25px;
-  background-color: rgb(199, 223, 223);
-  border-radius: 45% 75%;
+/*   background-color: rgb(199, 223, 223);
+  border-radius: 45% 75%; */
+  cursor: pointer;
 }
 
 .input-container {
