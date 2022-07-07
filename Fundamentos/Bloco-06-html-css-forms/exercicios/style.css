@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#header {
+  text-align: center;
+  line-height: 50px;
+  margin-top: 50px;
+}
+
+.linha-form {
+  width: 60vw;
+  /* border: 2px solid red; */
+  margin: 0 auto;
+}
+
+.container-btn {
+  text-align: center;
+  margin-top: 100px;
+}
