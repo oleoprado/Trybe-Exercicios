@@ -56,10 +56,29 @@ figcaption {
   }
 
   section {
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
 
   figure {
-    
+    width: 45%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  body {
+    background-color: lightpink;
+    font-size: 1.7em;
+    margin: 2% 10%;
+    max-width: 1440px;
+  }
+
+  figure {
+    flex-basis: 40%;
+  }
+
+  article {
+
   }
 }
