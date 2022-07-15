@@ -26,6 +26,78 @@ Utilize template literals para que a chamada console.log(<seu código>oddsAndEve
 Bônus (opcional): tente fazer o mesmo exercício utilizando o método array.sort(). Spoiler: É possível realizar uma função que ordene qualquer array de números.*/
 
 const oddsAndEvens = [13, 3, 4, 10, 7, 2];
-const ordemCrescente = () => oddsAndEvens.sort();
 
-console.log(oddsAndEvens.sort()); // será necessário alterar essa linha 😉
+
+const sortOddsAndEvens = () => {
+  oddsAndEvens[0] = 2;
+  oddsAndEvens[1] = 3;
+  oddsAndEvens[2] = 4;
+  oddsAndEvens[3] = 7;
+  oddsAndEvens[4] = 10;
+  oddsAndEvens[5] = 13;
+  return oddsAndEvens;
+}
+
+
+console.log(`Os numeros ${sortOddsAndEvens()} se encontram ordenados de forma crescente`);
+
+const ordenados = oddsAndEvens.sort((a, b) => a - b);
+console.log(ordenados);
+console.log(`Os numeros ${oddsAndEvens.sort((a, b) => a - b)} se encontram ordenados de forma crescente`);
+
+// PARTE 2
+
+//1-Crie uma função que receba um número e retorne seu fatorial.
+
+// const fatorial = (num) => {
+//   let resultado = num;
+//   for (let i = 1; i < num; i += 1 )
+//   resultado *= i;
+//   console.log(resultado);
+// }
+// fatorial(4);
+                                          
+const fatorial = (number) => number > 1 ? number * fatorial(number - 1) : 1;
+console.log(fatorial(4));
+
+// 2 - Crie uma função que receba uma frase e retorne a maior palavra.
+
+const maiorPalavra = (frase) => {
+  const palavras = frase.split(' ');
+  let maior = frase[0];
+  for (let i = 0; i < palavras.length; i += 1) {
+    if (palavras[i].length > maior.length ) {
+      maior = palavras[i];
+    }
+  }
+ console.log(maior);
+}
+
+maiorPalavra('abacaxi pindamonhangaba é uma cidade');
+
+// 4 - 🚀 Crie duas funções JavaScript com as seguintes especificações:
+//Função 1
+const substituiX = (nome) => {
+  const frase = 'Tryber x aqui!';
+  const novaFrase = frase.replace('x', nome)
+  
+  return novaFrase;
+}
+const retornoFuncao1 = substituiX('Leonardo');
+
+//função 2
+
+const novastring =  (retornoFuncao1) => {
+  const skills = ['Js', 'CSS', 'HTML'];
+  let resultado = `${retornoFuncao1}
+  Minhas três principais habilidades são:`;
+  
+  skills.forEach((skill) => {
+    resultado = `${resultado} 
+    - ${skill}`;
+  });
+  return resultado;
+};
+
+console.log(novastring(retornoFuncao1));
+
