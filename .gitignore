@@ -3,7 +3,7 @@
 .DS_Store
 .DS_Store?
 .vscode
-node_modules
+
 
 # Compiled source #
 ###################
@@ -26,6 +26,7 @@ node_modules
 *.rar
 *.tar
 *.zip
+*node_modules
 
 # Logs and databases #
 ######################
