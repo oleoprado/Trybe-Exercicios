@@ -22,4 +22,14 @@ console.log(newEmployees(nomeEmail));
 
 
 
+const checarNumeros = (numApostado, numSorteado) => numApostado === numSorteado;
+
+const sorteio = (numApostado, checarNumeros) => {
+  const numSorteado = Math.floor((Math.random() * 5) + 1);
+
+  return checarNumeros(numApostado, numSorteado) ? `Parabéns você ganhou! O numero sorteado foi: ${numSorteado}` : `Tente novamente. O numero sorteado foi: ${numSorteado}`;
+};
+console.log(sorteio(2, checarNumeros));
+
+
 
