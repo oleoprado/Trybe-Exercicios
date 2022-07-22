@@ -20,8 +20,6 @@ console.log(newEmployees(nomeEmail));
 
 /* 2 - Desenvolva uma HOF que retorna o resultado de um sorteio. Esta HOF irá gerar um número aleatório entre 1 e 5 recebendo como parâmetros o número apostado e uma função que checa se o número apostado é igual ao número sorteado. O retorno da sua HOF deve ser uma string (Ex: "Tente novamente" ou "Parabéns você ganhou").*/
 
-
-
 const checarNumeros = (numApostado, numSorteado) => numApostado === numSorteado;
 
 const sorteio = (numApostado, checarNumeros) => {
@@ -44,16 +42,26 @@ Ao final, a HOF deve retornar o total de pontos obtidos através das respostas f
 const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
 const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
 
-const retornaPontuacao = (arr1, arr2) => {
-  let acertos = 0;
-  let errosEnaoRespondidos = 0;
-  let naoRespondido = 0;
-  for (let i = 0; i < arr1.length; i += 1) {
-    (arr2[i] === 'N.A') ? naoRespondido += 1 : naoRespondido += 0;
-    (arr2[i] === arr1[i]) ? acertos += 1 : acertos += 0;
-    (arr2[i] !== arr1[i]) ? errosEnaoRespondidos += 1 : errosEnaoRespondidos += 0;
-  }
-  const totalErros = (errosEnaoRespondidos - naoRespondido) * .5; 
-  const pontuacaoFinal = (acertos - totalErros);
-  return pontuacaoFinal;
+const verifica = (gabarito, resposta) => {
+  if (gabarito === resposta) return 1;
+  if (resposta === 'N.A') return 0;
+  return -0.5;
 }
+
+const verifica2 = (gabarito, resposta) => {
+  if (gabarito === resposta) return 1;
+  return 0;
+}
+
+const retornaPontuacao = (arr1, arr2, callbackVerifica) => {
+  let pontuacao = 0;
+  for (let i = 0; i < arr1.length; i += 1) {
+    pontuacao += callbackVerifica(arr1[i], arr2[i]);
+  }
+  return `A sua pontuacao foi: ${pontuacao}`;
+}
+
+console.log(retornaPontuacao(RIGHT_ANSWERS, STUDENT_ANSWERS, verifica));
+console.log(retornaPontuacao(RIGHT_ANSWERS, STUDENT_ANSWERS, verifica2));
+
+const teste = [1, 4, 6, 9, 0];
