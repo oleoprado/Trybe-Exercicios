@@ -64,4 +64,4 @@ const retornaPontuacao = (arr1, arr2, callbackVerifica) => {
 console.log(retornaPontuacao(RIGHT_ANSWERS, STUDENT_ANSWERS, verifica));
 console.log(retornaPontuacao(RIGHT_ANSWERS, STUDENT_ANSWERS, verifica2));
 
-const teste = [1, 4, 6, 9, 0];
+
