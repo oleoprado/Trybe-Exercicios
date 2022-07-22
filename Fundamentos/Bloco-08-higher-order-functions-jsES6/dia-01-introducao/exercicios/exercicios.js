@@ -41,3 +41,19 @@ console.log(sorteio(2, checarNumeros));
 Ao final, a HOF deve retornar o total de pontos obtidos através das respostas fornecidas pela pessoa estudante. Utilize os seguintes arrays: */
 
 
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+
+const retornaPontuacao = (arr1, arr2) => {
+  let acertos = 0;
+  let errosEnaoRespondidos = 0;
+  let naoRespondido = 0;
+  for (let i = 0; i < arr1.length; i += 1) {
+    (arr2[i] === 'N.A') ? naoRespondido += 1 : naoRespondido += 0;
+    (arr2[i] === arr1[i]) ? acertos += 1 : acertos += 0;
+    (arr2[i] !== arr1[i]) ? errosEnaoRespondidos += 1 : errosEnaoRespondidos += 0;
+  }
+  const totalErros = (errosEnaoRespondidos - naoRespondido) * .5; 
+  const pontuacaoFinal = (acertos - totalErros);
+  return pontuacaoFinal;
+}
