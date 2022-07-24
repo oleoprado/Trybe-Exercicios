@@ -11,7 +11,7 @@ const enviarEmail = (email) => {
 
 listaDeAprovados.forEach((item, index, array) => {
   enviarEmail(item);
-  console.log(`sua posição no processo foi: ${index}`);
+  console.log(`sua posição no processo foi: ${index + 1}`);
   console.log(`a quantidade de pessoas no processo seletivo é: ${array.length}`);
 });
 
