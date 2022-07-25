@@ -6,8 +6,8 @@ const expectedResult = false;
 
 function everyoneWasBornOnSecXX() {
   // escreva seu código aqui
-  const anoAtual = 2022;
+  const inicioSeculoXX = 1901;
   const fimSeculoXX = 2000;
-  return books.every((autores) => autores.author.birthYear < fimSeculoXX);
+  return books.every((autores) => (autores.author.birthYear > inicioSeculoXX && autores.author.birthYear < fimSeculoXX));
 }
 console.log(everyoneWasBornOnSecXX());
