@@ -13,7 +13,6 @@ const expectedResult = [
 
 function formatedBookNames() {
   // escreva seu código aqui
-  const arrString = books.map((elemento) => `${elemento.name} - ${elemento.genre} - ${elemento.author.name}`);
-  return arrString;
+  return books.map((elemento) => `${elemento.name} - ${elemento.genre} - ${elemento.author.name}`);
 }
 console.log(formatedBookNames());

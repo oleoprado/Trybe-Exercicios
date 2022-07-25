@@ -30,7 +30,8 @@ const expectedResult = [
 
 function nameAndAge() {
   // escreva seu código aqui
-  const autores = books.map((ator) => ator.author.name);
-  console.log(autores);
+  const autores = books.map((ator) => ({age: (ator.releaseYear - ator.author.birthYear), author: ator.author.name}));
+  autores.sort((a, b) => a.age > b.age ? 1 : -1);
+  return autores;
 }
-nameAndAge();
+console.log(nameAndAge());
