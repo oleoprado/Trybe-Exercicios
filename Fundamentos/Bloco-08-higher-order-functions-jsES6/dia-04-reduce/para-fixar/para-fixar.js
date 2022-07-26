@@ -90,4 +90,43 @@ const report = estudantes.map((estudante) => ({
   name: estudante.nome, 
   materia: estudante.materias.reduce((acc, materia) => acc.nota > materia.nota ? acc : materia).name
 }));
-console.log(report);
+// console.log(report);
+
+// reduce com arr numbers
+const arr = [10, 20, 20];
+
+const acumuladorReduce = (acumulador, valorInicial) => acumulador + valorInicial;
+// console.log(arr.reduce(acumuladorReduce, 0));
+const teste = arr.reduce((acc, valorInicial) => acc + valorInicial);
+// console.log(teste);
+
+// reduce com arr obj
+const pessoas = [
+  {
+    nome: 'Leonardo',
+    idade: 31
+  },
+  {
+    nome: 'Jonathan',
+    idade: 35
+  },
+  {
+    nome: 'Glauco',
+    idade: 27
+  },
+  {
+    nome: 'Gael',
+    idade: 4
+  },
+  {
+    nome: 'Giovanna',
+    idade: 17
+  },
+]
+const pessoasAgrupadas = pessoas.reduce((valorAcumulador, valorArray) => {
+  const maiorOuMenor = valorArray.idade >= 18 ? 'maiores' : 'menores';
+  valorAcumulador[maiorOuMenor].push(valorArray);
+
+  return valorAcumulador;
+}, {maiores: [], menores: []})
+console.log(pessoasAgrupadas);
