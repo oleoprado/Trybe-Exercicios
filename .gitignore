@@ -27,6 +27,7 @@
 *.tar
 *.zip
 *node_modules
+*coverage
 
 # Logs and databases #
 ######################
