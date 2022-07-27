@@ -7,7 +7,10 @@ const names = [
 ];
 
 function containsA() {
-  // escreva seu código aqui
-  return names.map((name) => name.toLowerCase()).reduce((acc, name) => console.log(name), 0)
+  const lowerCase = names.map((name) => name.toLowerCase()).toString().split('');
+  const qtdDeA = lowerCase.reduce((acc, name) => name.includes('a') ? acc += 1 : acc, 0);
+
+  return qtdDeA;
 }
 console.log(containsA());
+
