@@ -4,7 +4,7 @@ const expectedResult = 43;
 
 function averageAge() {
   const qtdLivros = books.length;
-  const mediaIdades = books.map((book) => book.releaseYear - book.author.birthYear).reduce((acc, curr, array) => (acc + curr) , 0);
+  const mediaIdades = books.map((book) => book.releaseYear - book.author.birthYear).reduce((acc, curr) => (acc + curr) , 0);
   return (mediaIdades / qtdLivros);
 }
 console.log(averageAge()); 

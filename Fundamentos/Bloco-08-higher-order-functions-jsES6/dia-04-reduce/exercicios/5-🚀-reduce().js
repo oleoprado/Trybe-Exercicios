@@ -1,3 +1,5 @@
+// 🚀 5- Dada o array de nomes, retorne a quantidade de vezes em que aparecem a letra a maiúscula ou minúscula.
+
 const names = [
   'Aanemarie', 'Adervandes', 'Akifusa',
   'Abegildo', 'Adicellia', 'Aladonata',
@@ -6,4 +8,6 @@ const names = [
 
 function containsA() {
   // escreva seu código aqui
+  return names.map((name) => name.toLowerCase()).reduce((acc, name) => console.log(name), 0)
 }
+console.log(containsA());
