@@ -2,10 +2,21 @@
 // const greeting = (user = 'usuário') => console.log(`Welcome ${user}!`);
 
 // greeting(); // // Welcome usuário!
+//PARA-FIXAR
+//Para praticar, escreva uma função multiply que multiplique dois números passados como argumentos. Atribua como default o valor 1 caso não seja passado nenhum valor como segundo parâmetro.
+const multiply = (number, value = 1) => {
+  return number * value; 
+};
 
+console.log(multiply(8));
+
+
+/////////////////////////////////////////////////////////////
+// esquenta projeto
 const array = [-1,2,3,-4,5];
 function invert(array) {
   const inverteValor = array.map((numero) => numero >= 0 ? numero *= -1 : Math.abs(numero));
+  // array.map((number) => number * -1);
  return inverteValor ;
 }
 // console.log(invert(array));
@@ -25,7 +36,7 @@ const list1 = [
 
 const {language, country} = list1;
 function getFirstPython(list) {
-  const first = list.reduce((acc, curr) => console.log(acc), 'a')
+  const first = list.reduce((acc, curr) => console.log(acc), '')
   return first;
 }
-console.log(getFirstPython(list1));
+// console.log(getFirstPython(list1));
