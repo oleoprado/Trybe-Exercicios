@@ -1,23 +1,32 @@
 import React from "react";
 
-function ClickEsquerda () {
-  console.log('clicou na esqueda');
-}
-function ClickCentro () {
-  console.log('clicou na centro');
-}
-function ClickDireita () {
-  console.log('clicou na direita');
-}
-
 class Buttons extends React.Component {
+  constructor() {
+    super();
+    this.clickEsquerda = this.clickEsquerda.bind(this);
+    this.clickCentro = this.clickCentro.bind(this);
+    this.clickDireita = this.clickDireita.bind(this);
+  }
+
+  state = {
+    numClickEsq: 0,
+    numClickCent: 0,
+    numClickDir: 0
+  }
+  clickEsquerda = () => this.setState((estadoAnterior, _props) => ({numClickEsq: estadoAnterior.numClickEsq + 1}));
+  clickCentro = () => this.setState((estadoAnterior, _props) => ({numClickCent: estadoAnterior.numClickCent + 1}));
+  clickDireita = () => this.setState((estadoAnterior, _props) => ({numClickDir: estadoAnterior.numClickDir + 1}));
+  
   render() {
-    const { esquerda, centro, direita } = this.props;
+    // console.log(this);
+    // const { esquerda, centro, direita } = this.props;
+    const { numClickEsq, numClickCent, numClickDir } = this.props;
     return (
       <span>
-        <button onClick={ ClickEsquerda }>{ esquerda }</button>
-        <button onClick={ ClickCentro }>{ centro }</button>
-        <button onClick={ ClickDireita }>{ direita }</button>
+        {console.log(this.state)};
+        <button onClick={ this.clickEsquerda }>{ numClickEsq }</button>
+        <button onClick={ this.clickCentro }>{ numClickCent }</button>
+        <button onClick={ this.clickDireita }>{ numClickDir }</button>
       </span>
     )
   }
