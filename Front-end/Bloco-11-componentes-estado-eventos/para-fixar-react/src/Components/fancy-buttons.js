@@ -14,19 +14,31 @@ class Buttons extends React.Component {
     numClickDir: 0
   }
 
-  clickEsquerda = () => this.setState((estadoAnterior) => ({numClickEsq: estadoAnterior.numClickEsq + 1}));
-  clickCentro = () => this.setState((estadoAnterior) => ({numClickCent: estadoAnterior.numClickCent + 1}));
-  clickDireita = () => this.setState((estadoAnterior) => ({numClickDir: estadoAnterior.numClickDir + 1}));
-  
+  clickEsquerda = () => this.setState((estadoAnterior) => ({
+    numClickEsq: estadoAnterior.numClickEsq + 1
+  }));
+
+  clickCentro = () => this.setState((estadoAnterior) => ({
+    numClickCent: estadoAnterior.numClickCent + 1
+
+  }));
+
+  clickDireita = () => this.setState((estadoAnterior) => ({
+    numClickDir: estadoAnterior.numClickDir + 1
+
+  }));
+
+  verificaNumPar(num) {
+    return num % 2 === 0 ? 'green' : 'white'
+  }
+
   render() {
-    // console.log(this);
-    // const { esquerda, centro, direita } = this.props;
-    // const { numClickEsq, numClickCent, numClickDir } = this.props;
+    const { numClickEsq, numClickCent, numClickDir } = this.state;
     return (
       <span>
-        <button onClick={ this.clickEsquerda }>{ this.state.numClickEsq}</button>
-        <button onClick={ this.clickCentro }>{ this.state.numClickCent }</button>
-        <button onClick={ this.clickDireita }>{ this.state.numClickDir }</button>
+        <button onClick={this.clickEsquerda} style={{ backgroundColor: this.verificaNumPar(numClickEsq)}}>{this.state.numClickEsq}</button>
+        <button onClick={this.clickCentro} style={{ backgroundColor: this.verificaNumPar(numClickCent)}}>{this.state.numClickCent}</button>
+        <button onClick={this.clickDireita} style={{ backgroundColor: this.verificaNumPar(numClickDir)}}>{this.state.numClickDir}</button>
       </span>
     )
   }
