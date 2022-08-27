@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+// import Counter from './Components/Counter';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+// import './App.css';
+
+class App extends React.Component {
+  state = {
+    users: [],
+    renderizouApi: false,
+    // carregando: true,
+  }
+
+  async fetchUsers() {
+    const URL = await fetch('https://api.randomuser.me/');
+    const response = await URL.json();
+    const data = response.results;
+    this.setState({
+      users: data,
+      renderizouApi: true,
+      // carregando: false,
+    })
+  }
+
+  componentDidMount() {
+    const { users } = this.state;
+    this.fetchUsers();
+   
+  }
+
+
+  render() {
+    const { renderizouApi, users } = this.state;
+    return (
+      <>
+      {
+        !renderizouApi ? (<div>Carregando</div>) : users.map((user) => <p>{ user.email }</p>)
+      }
+      </>
+    )
+  }
 }
-
 export default App;
