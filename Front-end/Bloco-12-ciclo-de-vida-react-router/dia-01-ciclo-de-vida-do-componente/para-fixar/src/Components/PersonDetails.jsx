@@ -8,7 +8,20 @@ class PersonDetails extends React.Component {
     return(
       <>
       {
-        carregandoApi ? carregando : users[0].email
+        carregandoApi
+        ? carregando
+        : users
+          .map(({picture:{medium},
+            name:{title, first, last},
+            email,
+            registered:{age}}) => 
+            <div key={ email }>
+              <img src={medium} alt='foto user'/>
+              <h3>{title} {first} {last}</h3>
+              <p><em>{email}</em></p>
+              <p><strong>{age}</strong> anos</p>
+            </div>
+          )
       }
       </>
     )
