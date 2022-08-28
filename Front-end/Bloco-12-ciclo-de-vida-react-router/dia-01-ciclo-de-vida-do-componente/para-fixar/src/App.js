@@ -29,9 +29,13 @@ class App extends React.Component {
 
   shouldComponentUpdate(_nextProps, { users }) {
     const { dob:{ age } } = users[0];
-    // console.log(age);
+    console.log(age);
     const AGE = 50;
-    if(age < AGE) return true;
+    if(age < AGE) {
+      return true
+    } else {
+      return false;
+    }
   }
 
   render() {
