@@ -1,41 +1,38 @@
 import React from 'react';
 // import Counter from './Components/Counter';
+import PersonDetails from './Components/PersonDetails';
 
 // import './App.css';
 
 class App extends React.Component {
   state = {
     users: [],
-    renderizouApi: false,
-    // carregando: true,
+    carregandoApi: true,
   }
 
-  async fetchUsers() {
+  componentDidMount() {
+    this.fetchUsers();
+  }
+
+  fetchUsers = async () => {
     const URL = await fetch('https://api.randomuser.me/');
     const response = await URL.json();
     const data = response.results;
     this.setState({
       users: data,
-      renderizouApi: true,
-      // carregando: false,
+      carregandoApi: false,
     })
+    // console.log(data, 'carregou didMount');
   }
-
-  componentDidMount() {
-    const { users } = this.state;
-    this.fetchUsers();
-   
-  }
-
 
   render() {
-    const { renderizouApi, users } = this.state;
+    // console.log('renderizou');
+    const { carregandoApi, users } = this.state;
     return (
-      <>
-      {
-        !renderizouApi ? (<div>Carregando</div>) : users.map((user) => <p>{ user.email }</p>)
-      }
-      </>
+      <PersonDetails
+        carregandoApi={ carregandoApi }
+        users={ users }
+      />
     )
   }
 }
