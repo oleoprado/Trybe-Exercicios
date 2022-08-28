@@ -2,18 +2,14 @@ import React from 'react';
 // import Counter from './Components/Counter';
 import PersonDetails from './Components/PersonDetails';
 
-// import './App.css';
+import './App.css';
 
 class App extends React.Component {
   state = {
     users: [],
     carregandoApi: true,
   }
-
-  componentDidMount() {
-    this.fetchUsers();
-  }
-
+  
   fetchUsers = async () => {
     const URL = await fetch('https://api.randomuser.me/');
     const response = await URL.json();
@@ -21,8 +17,21 @@ class App extends React.Component {
     this.setState({
       users: data,
       carregandoApi: false,
+      idadeMaior50: false,
     })
     // console.log(data, 'carregou didMount');
+  }
+
+  componentDidMount() {
+    // console.log('component did mount');
+    this.fetchUsers();
+  }
+
+  shouldComponentUpdate(_nextProps, { users }) {
+    const { dob:{ age } } = users[0];
+    // console.log(age);
+    const AGE = 50;
+    if(age < AGE) return true;
   }
 
   render() {

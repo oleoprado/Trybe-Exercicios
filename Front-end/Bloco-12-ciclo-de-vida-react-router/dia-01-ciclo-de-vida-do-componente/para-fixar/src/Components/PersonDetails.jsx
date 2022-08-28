@@ -14,7 +14,7 @@ class PersonDetails extends React.Component {
           .map(({picture:{medium},
             name:{title, first, last},
             email,
-            registered:{age}}) => 
+            dob:{age}}) => 
             <div key={ email }>
               <img src={medium} alt='foto user'/>
               <h3>{title} {first} {last}</h3>
