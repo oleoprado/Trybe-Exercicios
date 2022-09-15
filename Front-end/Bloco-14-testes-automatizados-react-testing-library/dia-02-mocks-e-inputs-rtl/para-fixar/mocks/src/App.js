@@ -37,7 +37,7 @@ class App extends React.Component {
           type="button"
           onClick={ this.fetchJoke }
         >
-          New Joke
+          New joke
         </button>
       </div>
       </div>
