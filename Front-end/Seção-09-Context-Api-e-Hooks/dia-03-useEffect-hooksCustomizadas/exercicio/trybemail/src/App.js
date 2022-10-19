@@ -1,23 +1,56 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
+import List from './components/List';
+import messagesList from './data/messagesList';
+import { READ, UNREAD } from './constants';
+import Controls from './components/Controls';
 import './App.css';
 
 function App() {
+  const [messages, setMessages] = useState(messagesList);
+
+  useEffect(() => {
+    const isAllMessagesRead = messages.every(({ status }) => status === READ);
+
+    if (isAllMessagesRead) {
+      alert('Parabéns! Você leu todas suas mensagens!');
+    }
+
+  }, [messages]);
+
+  const setMessageStatus = (messageId, newStatus) => {
+    const updatedMessages = messages.map((currentMessage) => {
+      if (currentMessage.id === messageId) {
+        return { ...currentMessage, status: newStatus };
+      }
+      return currentMessage;
+    });
+
+    setMessages(updatedMessages);
+  };
+
+  const markAllAsRead = () => {
+    const allAsRead = messages.map((m) => ({ ...m, status: READ }));
+    setMessages(allAsRead);
+  };
+
+  const markAllAsUnread = () => {
+    const allAsRead = messages.map((m) => ({ ...m, status: UNREAD }));
+    setMessages(allAsRead);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1>TrybeMail</h1>
       </header>
+      <Controls
+        markAllAsRead={ markAllAsRead }
+        markAllAsUnread={ markAllAsUnread }
+      />
+      <List
+        messages={ messages }
+        setMessageStatus={ setMessageStatus }
+      />
     </div>
   );
 }
