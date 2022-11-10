@@ -1,0 +1,1 @@
+FROM --platform=arm64 betrybe/docker-compose-example-database:v1 

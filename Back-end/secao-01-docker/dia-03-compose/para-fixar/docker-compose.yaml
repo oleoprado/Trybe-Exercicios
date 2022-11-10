@@ -17,5 +17,5 @@ services:
     depends_on:
       - database
   database:
-    image: betrybe/docker-compose-example-database:v1 # Especificamos a Imagem Docker diretamente.
+    build: db/
     restart: on-failure
