@@ -1,0 +1,44 @@
+1 - Executando um container com MySQL
+docker container run --name container-mysql -e MYSQL_ROOT_PASSWORD=root -d -p 3306:3306 mysql
+
+2 - Parando seu container
+docker container stop container-mysql
+
+3- Iniciando seu container
+docker container start container-mysql
+## Deletando seu container
+Se agora você não quer mais usar esse container e quer removê-lo, pare o container e execute o comando abaixo:
+## quando o container estiver parado
+docker container rm container-mysql
+
+4 - visualizar quais bancos de dados estão disponíveis, através do modo interativo do docker
+docker exec -it container-mysql bash
+
+5- acessar o mysql dentro do container
+mysql -u root -p
+
+////////////
+
+COMANDOS MAIS COMUNS
+
+palavras chave do SQL em caixa alta para diferenciar das indicações de tabelas e colunas. Ah, é fundamental utilizar o ;
+
+- USE = definir a referência do banco de dados que será utilizado na query
+USE nome_do_banco_de_dados_que_quero_conectar;
+-- EX: USE trybe;
+
+-  Uma outra forma de fazer referência ao banco, sem ter que rodar o USE é no formato banco_de_dados.tabela:
+SELECT * FROM banco_de_dados.tabela;
+-- EX: SELECT * FROM trybe.students;
+
+- retornar todas as tabelas inicializadas no seu server
+SHOW TABLES;
+
+- Visualizar estrutura de uma tabela:
+DESCRIBE nome_da_tabela;
+-- EX: DESCRIBE students;
+
+- Criar um banco de dados:
+CREATE DATABASE nome_do_banco_de_dados;
+-- EX: CREATE DATABASE trybe;
+
