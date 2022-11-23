@@ -176,3 +176,73 @@ SELECT MIN(replacement_cost) FROM sakila.film; -- 9.99 (Menor valor encontrado)
 SELECT MAX(replacement_cost) FROM sakila.film; -- 29.99 (Maior valor encontrado)
 SELECT SUM(replacement_cost) FROM sakila.film; -- 19984.00 (Soma de todos registros)
 SELECT COUNT(replacement_cost) FROM sakila.film; -- 1000 registros encontrados (Quantidade)
+
+-- GROUP BY e HAVING
+GROUP BY --Os resultados de uma query podem ser agrupados por uma ou mais colunas, ambém pode ser usado em conjunto com as funções de agregação que vimos anteriormente.
+--Removerá duplicações, retornando apenas um valor da coluna usada no agrupamento.
+SELECT coluna(s) FROM tabela
+GROUP BY coluna(s);
+
+SELECT first_name FROM sakila.actor
+GROUP BY first_name;
+
+-- combinando GROUP BY com AVG,MIN,MAX,SUM,COUNT
+SELECT first_name, COUNT(*) FROM sakila.actor
+GROUP BY first_name;
+
+--Também podemos utilizar o GROUP BY para agrupar os registros pelos valores de mais de uma coluna.
+
+-- Média de duração de filmes agrupados por classificação indicativa
+SELECT rating, AVG(length)
+FROM sakila.film
+GROUP BY rating;
+
+-- Valor mínimo de substituição dos filmes agrupados por classificação indicativa
+SELECT rating, MIN(replacement_cost)
+FROM sakila.film
+GROUP BY rating;
+
+-- Valor máximo de substituição dos filmes agrupados por classificação indicativa
+SELECT rating, MAX(replacement_cost)
+FROM sakila.film
+GROUP BY rating;
+
+-- Custo total de substituição de filmes agrupados por classificação indicativa
+SELECT rating, SUM(replacement_cost)
+FROM sakila.film
+GROUP by rating;
+
+-- Filtrando Resultados do GROUP BY com HAVING
+HAVING -- serve para filtrar resultados agrupados (igual ao SELECT...WHERE)
+--O HAVING acontece por último na execução da consulta, de modo que primeiro são calculados os agrupamentos, e apenas depois disso são filtrados os que não satisfazem as condições da cláusula HAVING
+
+SELECT first_name, COUNT(*)
+FROM sakila.actor
+GROUP BY first_name
+HAVING COUNT(*) > 2;
+
+-- Ou, melhor ainda, usando o AS para dar nomes às colunas de agregação,
+-- melhorando a leitura do resultado
+SELECT first_name, COUNT(*) AS nomes_cadastrados
+FROM sakila.actor
+GROUP BY first_name
+HAVING nomes_cadastrados > 2;
+
+-- Observação: o alias não funciona com strings para o HAVING,
+-- então use o underline ("_") para separar palavras
+-- Ou seja, o exemplo abaixo não vai funcionar
+SELECT first_name, COUNT(*) AS 'nomes cadastrados'
+FROM sakila.actor
+GROUP BY first_name
+HAVING 'nomes cadastrados' > 2;
+--assim vai:
+SELECT first_name, COUNT(*) AS nomes_cadastrados
+FROM sakila.actor
+GROUP BY first_name
+HAVING nomes_cadastrados > 2;
+
+-- HAVING pode ser utilizado em agrupamentos que envolvam mais de uma coluna
+SELECT rating, rental_rate, COUNT(1) as total FROM sakila.film
+GROUP BY rental_rate, rating
+HAVING total < 70
+ORDER BY rating, rental_rate;
