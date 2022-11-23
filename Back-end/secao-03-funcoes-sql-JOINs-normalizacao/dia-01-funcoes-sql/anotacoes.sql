@@ -72,7 +72,7 @@ SELECT
         WHEN email = 'PATRICIA.JOHNSON@sakilacustomer.org' THEN 'Cliente de médio valor'
         WHEN email = 'LINDA.WILLIAMS@sakilacustomer.org' THEN 'Cliente de alto valor'
         ELSE 'não classificado'
-    END AS valor -- "finalizar com dando nome a coluna(valor)"
+    END AS valor -- "finalizar com AS dando nome a coluna(valor)"
 FROM sakila.customer
 LIMIT 10;
 
