@@ -75,3 +75,72 @@ SELECT
     END AS valor -- "finalizar com dando nome a coluna(valor)"
 FROM sakila.customer
 LIMIT 10;
+
+-- FUNÇÕES MATEMATICAS DO MYSQL
+
+--Adição, subtração, multiplicação e divisão:
+SELECT 5 + 5;
+SELECT 5 - 5;
+SELECT 5 * 5;
+SELECT 5 / 5;
+
+--Podemos, também, usar as colunas diretamente como base para os cálculos, caso necessário.
+SELECT rental_duration + rental_rate FROM sakila.film LIMIT 10;
+SELECT rental_duration - rental_rate FROM sakila.film LIMIT 10;
+SELECT rental_duration / rental_rate FROM sakila.film LIMIT 10;
+SELECT rental_duration * rental_rate FROM sakila.film LIMIT 10;
+
+--Divisão de inteiros com DIV e como encontrar seus restos com o MOD
+--DIV retorna o resultado inteiro de uma divisão, ignorando as casas decimais de um número.
+SELECT 10 DIV 3; -- 3
+SELECT 10 DIV 2; -- 5
+SELECT 14 DIV 3; -- 4
+SELECT 13 DIV 2; -- 6
+
+--MOD retorna o resto de uma divisão como resultado
+SELECT 10 MOD 3; -- 1
+SELECT 10 MOD 2; -- 0
+SELECT 14 MOD 3; -- 2
+SELECT 13 MOD 2; -- 1
+SELECT 10.5 MOD 2; -- 0.5, ou seja, 2 + 2 + 2 + 2 + 2 = 10, restando 0.5
+
+--Dica: Números pares são aqueles que podem ser divididos em duas partes iguais. Ou seja, são aqueles cuja divisão por 2 retorna resto 0.
+
+-- Arrendondando valores
+ROUND --arredonda os números de acordo com sua parte decimal. Se for maior ou igual a 0.5, o resultado é um arredondamento para cima. Caso contrário, ocorre um arredondamento para baixo.
+SELECT ROUND(10.4925); -- 10
+SELECT ROUND(10.5136); -- 11
+SELECT ROUND(-10.5136); -- -11
+SELECT ROUND(10.4925, 2); -- 10.49 -- Podemos omitir ou especificar quantas casas decimais queremos
+SELECT ROUND(10.4925, 3); -- 10.493 -- Podemos omitir ou especificar quantas casas decimais queremos
+
+
+CEIL --arredondamento sempre para cima
+SELECT CEIL(10.51); -- 11
+SELECT CEIL(10.49); -- 11
+SELECT CEIL(10.2); -- 11
+
+FLOOR --arredondamento sempre para baixo
+SELECT FLOOR(10.51); -- 10
+SELECT FLOOR(10.49); -- 10
+SELECT FLOOR(10.2); -- 10
+
+-- Exponenciação e raiz quadrada
+--Para cálculos de exponenciação e raiz quadradas, podemos utilizar as funções POW e SQRT, respectivamente.
+
+POW --Elevando um número X à potência Y:
+SELECT POW(2, 2); -- 4
+SELECT POW(2, 4); -- 16
+
+SQRT --Encontrando a raiz quadrada de um valor
+SELECT SQRT(9); -- 3
+SELECT SQRT(16); -- 4
+
+-- Gerando valores aleatórios
+-- podemos usar a função RAND, em conjunto com as funções anteriores.
+-- Para gerar um valor aleatório entre 0 e 1:
+SELECT RAND();
+
+-- Para gerar um valor entre 7 e 13:
+SELECT ROUND(7 + (RAND() * 6)); -- O cálculo que é feito é o seguinte: (7 + (0.0 a 1.0 * 6))
+
