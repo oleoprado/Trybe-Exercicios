@@ -168,3 +168,11 @@ SELECT TIMEDIFF('2021-08-11 08:30:10', '2021-08-01 09:30:10');
 CURRENT_DATE() e NOW() -- em conjunto com os comandos de manipulação de datas e tempo para encontrar resultados dinâmicos da seguinte maneira:
 SELECT YEAR(CURRENT_DATE()); -- retorna o ano atual
 SELECT HOUR(NOW()); -- retorna a hora atual
+
+-- funções de agregação AVG, MIN, MAX, SUM e COUNT
+-- Usando a coluna replacement_cost (valor de substituição), vamos encontrar:
+SELECT AVG(replacement_cost) FROM sakila.film; -- 19.984000 (Média entre todos registros)
+SELECT MIN(replacement_cost) FROM sakila.film; -- 9.99 (Menor valor encontrado)
+SELECT MAX(replacement_cost) FROM sakila.film; -- 29.99 (Maior valor encontrado)
+SELECT SUM(replacement_cost) FROM sakila.film; -- 19984.00 (Soma de todos registros)
+SELECT COUNT(replacement_cost) FROM sakila.film; -- 1000 registros encontrados (Quantidade)
