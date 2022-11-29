@@ -61,3 +61,23 @@ FROM
 RIGHT JOIN
 	pixar.movies AS m ON t.id = m.theater_id
 ORDER BY t.name;
+--🚀 Exercício 6: Utilizando o INNER JOIN, selecione todas as informações dos filmes que estão em cartaz (possuem theater_id diferente de NULL) com avaliação maior que 8.
+SELECT m.id, m.title, m.director, m.year, m.length_minutes, m.theater_id
+FROM movies m
+INNER JOIN box_office b
+ON b.movie_id = m.id
+WHERE b.rating > 8 AND m.theater_id IS NOT NULL;
+-- Ou
+SELECT 
+    th.name,
+    th.location,
+    mo.title,
+    mo.director,
+    mo.year,
+    mo.length_minutes
+ FROM 
+    movies as mo
+INNER JOIN
+    theater as th ON mo.theater_id = th.id
+INNER JOIN box_office as bo ON bo.movie_id = mo.id
+WHERE bo.rating > 8.0
