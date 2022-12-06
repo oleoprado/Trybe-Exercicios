@@ -199,3 +199,133 @@ npm install // baixa e instala todos os pacotes listados nos objetos de dependen
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
+FLUXO ASSINCRONO
+
+//Relembrando🧠: Assim como no front-end, as operações assíncronas são essenciais para as rotinas do back-end. Essas operações permitem que tarefas independentes sejam executadas em segundo plano, sem que o fluxo de execução aguarde pela finalização dessas tarefas.
+
+//Existem duas formas principais para implementarmos código assíncrono em JavaScript, usando Callbacks e Promises.
+
+// -As Callbacks fornecem uma interface com a qual você pode dizer: “e quando terminar de fazer isso, faça aquilo”.
+
+// -As Promises funcionam do mesmo jeito: uma promessa/função é criada e, dentro dela, existe um código/ação a ser executado. Se o código é executado sem nenhum problema, a Promise é resolvida por meio da função resolve; se algo de errado acontecer durante a execução, a Promise é rejeitada por meio da função reject.
+
+//Tratando erros de forma sincrona
+function dividirNumeros(num1, num2) {
+  if (num2 == 0) throw new Error("Não pode ser feito uma divisão por zero");
+
+  return num1 / num2;
+}
+
+try {
+  const resultado = dividirNumeros(2, 1);
+  console.log(`resultado: ${resultado}`);
+} catch (e) {
+  console.log(e.message);
+}
+
+
+//Tratando erros de forma assincrona
+function dividirNumeros(num1, num2) {
+  const promise = new Promise((resolve, reject) => {
+    if (num2 == 0) 
+      reject(new Error("Não pode ser feito uma divisão por zero"));
+
+    const resultado = num1 / num2;
+    resolve(resultado)
+  });
+
+  return promise;
+}
+
+dividirNumeros(2, 1)
+  .then(result => console.log(`sucesso: ${result}`))
+  .catch(err => console.log(`erro: ${err.message}`));
+
+
+// FUNCOES ASYNC / AWAIT
+
+// Uma função async retorna uma promise, tal como o exemplo abaixo:
+function dividirNumeros(num1, num2) {
+  const promise = new Promise((resolve, reject) => {
+    if (num2 == 0) 
+      reject(new Error("Não pode ser feito uma divisão por zero"));
+
+    const resultado = num1 / num2;
+    resolve(resultado)
+  });
+
+  return promise;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+
+LEITURA E ESCRITA DE ARQUIVOS
+
+//A leitura e escrita de arquivos é uma rotina muito realizada nas operações de back-end. Você pode, por exemplo:
+
+// - armazenar os logs da sua aplicação;
+// - ler arquivos de configurações para ações específicas;
+// - exportar dados em um arquivo CSV.
+
+// LENDO ARQUIVOS COM METODOS SINCRONOS
+
+fs.readFileSync 
+/*
+ - sincrono,
+ - não tem a melhor performace,
+ - não usa callback nem promise,
+*/
+
+fs.readFile
+/*
+- Assincrono,
+- Mais performático que o readFileSync,
+- Usa callback
+*/
+
+fs.promises.readFile
+/*
+- Assincrono,
+- Mais performático que os outros dois,
+- Usa async/await ou then/catch
+*/
+
+
+// LENDO ARQUIVOS COM METODOS ASSINCRONOS
+//O método fornecido pelo módulo fs para leitura assíncrona de arquivos é o fs.readFile. Esse método possui diferentes formas de retornar a leitura de um arquivo. Neste caso, iremos utilizar o retorno de uma Promise que deve deixar nosso código muito mais legível.
+
+//Observação: Para utilizar as operações assíncronas do fs, precisamos alterar a importação do módulo fs para ('fs').promises. Dessa forma, poderemos chamar as funções assíncronas para leitura e escrita de arquivos que retornarão Promises.
+
+const fs = require('fs').promises;
+
+async function main() {
+  try {
+    const data = await fs.readFile('./meu-arquivo.txt', 'utf-8');
+    console.log(data);
+  } catch (err) {
+    console.error(`Erro ao ler o arquivo: ${err.message}`);
+  }
+}
+
+main()
+
+//ESCREVENDO DADOS EM ARQUIVOS
+//Assim como o módulo ('fs').promises disponibiliza o método readFile para a leitura, há também o método writeFile para a escrita.
+const fs = require('fs').promises;
+
+async function main() {
+  try {
+    await fs.writeFile('./meu-arquivo.txt', 'Meu textão');
+    console.log('Arquivo escrito com sucesso!');
+  } catch (err) {
+    console.error(`Erro ao escrever o arquivo: ${err.message}`);
+  }
+}
+
+main()
+
+//Anota aí 🖊: No writeFile, assim como ocorre no readFile, você pode especificar algumas opções na escrita de arquivos passando um terceiro parâmetro (flag) opcional em seus métodos.
+
+// A opção flag especifica como o arquivo deve ser aberto e manipulado. O padrão é 'w', que especifica que o arquivo deve ser aberto para escrita.
+
+// Observação: Se o arquivo não existir, ele é criado. Caso contrário, é reescrito, ou seja, tem seu conteúdo apagado antes de o novo conteúdo ser escrito. A flag 'wx', por exemplo, funciona como 'w', mas lança um erro caso o arquivo já exista.
