@@ -151,6 +151,8 @@ CONFIGURAR SCRIPT DE TESTE
 
 DUBLES DE TESTE
 
+// Para evitar de alterar os dados reais, criamos dubles dos nossos dados para realizar nossos testes
+
 // ⚠️ Aviso: Vale ressaltar que o dublê de teste não se restringe a funções específicas, como a leitura com o fs. O que precisamos ter em mente, ao definir um dublê, é o motivo pelo qual estamos isolando essa função.
 
 // ferramenta Sinon, a qual fornece funções para diversos tipos dos Test Doubles.
