@@ -72,7 +72,7 @@ describe('Testando a API Cacau Trybe', function () {
         expect(response.body.chocolates).to.deep.equal(output);
     });
   });
-});
+
 
 describe('Usando o método GET em /chocolates/:id p/ buscar o ID 4', function () {
   it('Retorna o chocolate Mounds', async function () {
@@ -122,4 +122,11 @@ describe('Usando o método GET em /chocolates/brand/:brandId p/ buscar brandId1'
       },
     ]);
   });
+});
+
+describe('Usando o método GET em /chocolates/total', function () {
+  it('', function () {
+
+  });
+});
 });
