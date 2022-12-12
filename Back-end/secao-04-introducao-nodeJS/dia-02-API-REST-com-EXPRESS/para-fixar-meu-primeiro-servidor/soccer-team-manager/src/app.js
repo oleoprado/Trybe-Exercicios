@@ -16,6 +16,24 @@ const teams = [
 const app = express();
 app.use(express.json());
 
+function existingId(req, res, next) {
+  const id = Number(req.params.id);
+
+  if (teams.some(team => team.id === id)) {
+    return next();
+  } else {
+    res.status(400).json({ error: "ID não encontrado"})
+  }
+};
+
+app.get('/teams/:id', existingId, (req, res) => {
+  const id = Number(req.params.id);
+
+  const team = teams.find(team => team.id === id);
+
+  res.status(200).json(team);
+});
+
 app.get('/', (req, res) => res.status(200).json({ message: 'Olá Mundo'}));
 app.get('/teams', (req, res) => res.status(200).json({ teams }));
 
@@ -26,27 +44,24 @@ app.post('/teams', (req, res) => {
   res.status(201).json({ team: newTeam });
 });
 
-app.put('/teams/:id', (req, res) => {
-  const { id } = req.params;
+app.put('/teams/:id', existingId, (req, res) => {
+  const id = Number(req.params.id);
   const { name, initials } = req.body;
 
-  const updateTeam = teams.find(team => team.id === Number(id));
-
-  if(!updateTeam) {
-    res.status(404).json({ message: 'Team not found'});
-  }
-
+  const updateTeam = teams.find(team => team.id === id);
   updateTeam.name = name;
   updateTeam.initials = initials;
-  res.status(200).json({ updateTeam });
+
+  res.status(200).json(updateTeam);
 });
 
-app.delete('/teams/:id', (req, res) => {
-  const { id } = req.params;
-  const arrayPosition = teams.findIndex((team) => team.id === Number(id));
+app.delete('/teams/:id', existingId, (req, res) => {
+  const id = Number(req.params.id);
+
+  const arrayPosition = teams.findIndex((team) => team.id === id);
   teams.splice(arrayPosition, 1);
 
-  res.status(200).end();
+  res.status(200).json({ message: 'Deletado com sucesso!!'});
 });
 
 
