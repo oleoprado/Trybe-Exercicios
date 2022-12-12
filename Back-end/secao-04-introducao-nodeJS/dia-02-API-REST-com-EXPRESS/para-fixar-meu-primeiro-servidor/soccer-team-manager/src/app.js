@@ -1,4 +1,7 @@
 const express = require('express');
+require('express-async-errors');
+
+const apiCredentials = require('./middlewares/apiCredentials');
 
 const teams = [
   {
@@ -15,6 +18,7 @@ const teams = [
 
 const app = express();
 app.use(express.json());
+app.use(apiCredentials);
 
 function existingId(req, res, next) {
   const id = Number(req.params.id);
