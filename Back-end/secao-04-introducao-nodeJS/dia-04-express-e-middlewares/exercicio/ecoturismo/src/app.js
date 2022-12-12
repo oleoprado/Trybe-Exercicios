@@ -3,12 +3,14 @@ const express = require('express');
 const validateName = require('./middlewares/validateName');
 const validatePrice = require('./middlewares/validatePrice');
 const validateDescription = require('./middlewares/validateDescription');
+const validateFormatCreatedAt = require('./middlewares/validateFormatCreatedAt');
+const validateRating = require('./middlewares/validateRating');
 
 const app = express();
 
 app.use(express.json());
 
-app.post('/activities', validateName, validatePrice, validateDescription, (req, res) => {
+app.post('/activities', validateName, validatePrice, validateDescription, validateFormatCreatedAt, validateRating, (req, res) => {
   const { name, price, description: { rating, difficulty, createdAt } } = req.body;
 
   const newActivitie = {
