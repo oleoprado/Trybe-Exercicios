@@ -6,10 +6,12 @@ const validateDescription = require('./../middlewares/validateDescription');
 const validateFormatCreatedAt = require('./../middlewares/validateFormatCreatedAt');
 const validateRating = require('./../middlewares/validateRating');
 const validateDifficulty = require('./../middlewares/validateDifficulty');
+const authentication = require('../middlewares/authentication');
 
 const activitiesRouter = express.Router();
 
 activitiesRouter.post('/activities',
+  authentication,
   validateName,
   validatePrice,
   validateDescription,
