@@ -1,14 +1,13 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const sinon = require('sinon');
-const { response } = require('../../src/app');
 
 const app = require('../../src/app');
 const connection = require('../../src/db/connection');
 
-const { expect, use } = chai;
+const { expect } = chai;
 
-use(chaiHttp);
+chai.use(chaiHttp);
 
 const peopleList = [
   {
@@ -93,6 +92,6 @@ describe('Testando os endpoints de people', function() {
     expect(response.body).to
       .deep.equal({ message: 'Pessoa de id 1 excluída com sucesso' });
   });
-  
+
   afterEach(sinon.restore);
 });
