@@ -18,10 +18,6 @@ const findAll = async () => {
 };
 
 module.exports = {
-  findAll,
-};
-
-module.exports = {
   findById,
   findAll,
 };

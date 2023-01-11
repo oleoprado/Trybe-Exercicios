@@ -1,4 +1,4 @@
-const { travelModel } = require('../models');
+const { travelModel, driverModel } = require('../models');
 
 const {
   validateInputValues,
@@ -60,9 +60,16 @@ const endTravel = async ({ travelId, driverId }) => {
   return { type: null, message: result }; 
 };
 
+// listar todos os motoristas
+const findAll = async () => {
+  const result = await driverModel.findAll();
+  return result;
+};
+
 module.exports = {
   travelAssign,
   startTravel,
   endTravel,
   getWaitingDriverTravels,
+  findAll,
 };

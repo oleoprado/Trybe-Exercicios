@@ -24,6 +24,11 @@ app.post('/passengers/:passengerId/request/travel', async (req, res) => {
   res.status(201).json(travel);
 });
 
+app.get('/drivers', async (_req, res) => {
+  const result = await driverService.findAll();
+  res.status(200).json(result);
+});
+
 app.get('/drivers/open/travels', async (_req, res) => {
   const result = await driverService.getWaitingDriverTravels();
   res.status(200).json(result);

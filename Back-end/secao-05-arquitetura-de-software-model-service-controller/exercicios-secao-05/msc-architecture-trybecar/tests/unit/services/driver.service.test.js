@@ -7,7 +7,10 @@ const {
   correctReturnTravel,
   correctReturnDriver,
   busyDriver,
+  listAllDrivers,
 } = require('./mocks/driver.service.mock');
+const { driverModel } = require('../../../src/models');
+const { driverService } = require('../../../src/services');
 
 const DRIVER_ON_THE_WAY = 2;
 
@@ -75,6 +78,16 @@ describe('Verificando service Driver', function () {
         requestDate: '2022-08-24T03:04:04.374Z',
       });
       sinon.restore();
+    });
+  });
+
+  describe('Listando todos os motoristas', function () {
+    it('Testando se todos os motoristas são listados', async function () {
+      sinon.stub(driverModel, 'findAll').resolves(listAllDrivers);
+
+      const result = await driverService.findAll();
+
+      expect(result).to.deep.equal(listAllDrivers);
     });
   });
 
