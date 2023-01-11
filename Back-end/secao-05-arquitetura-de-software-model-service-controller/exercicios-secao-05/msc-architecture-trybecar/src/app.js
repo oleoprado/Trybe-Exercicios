@@ -1,6 +1,6 @@
 const express = require('express');
 /* Adicionamos a importação dos services */
-const { passengerService, driverService } = require('./services');
+const { passengerService, driverService, carService } = require('./services');
 
 const app = express();
 
@@ -68,6 +68,12 @@ app.post('/cars', (req, res) => {
   };
 
   res.status(200).json(car);
+});
+
+app.get('/cars', async (_req, res) => {
+  const result = await carService.findAll();
+
+  res.status(200).json(result);
 });
 
 module.exports = app;

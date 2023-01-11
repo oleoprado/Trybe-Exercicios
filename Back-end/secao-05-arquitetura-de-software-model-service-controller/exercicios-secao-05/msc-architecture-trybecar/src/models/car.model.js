@@ -16,6 +16,15 @@ const insertCar = async (car) => {
   return id;
 };
 
+const findAll = async () => {
+  const [result] = await connection.execute(
+    'SELECT * FROM cars',
+  );
+
+  return result;
+};
+
 module.exports = {
   insertCar,
+  findAll,
 };

@@ -6,6 +6,11 @@ const insert = async (model, color, licensePlate) => {
   return newCarId;
 };
 
+const findAll = async () => {
+  const result = await carModel.findAll();
+  return result;
+};
 module.exports = {
   insert,
+  findAll,
 };
