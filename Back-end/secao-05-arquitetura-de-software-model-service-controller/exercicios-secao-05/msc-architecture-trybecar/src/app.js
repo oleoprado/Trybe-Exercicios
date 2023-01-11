@@ -58,4 +58,16 @@ app.put('/drivers/:driverId/travels/:travelId/end', async (req, res) => {
   res.status(200).json(message);
 });
 
+app.post('/cars', (req, res) => {
+  const { model, color, licensePlate } = req.body;
+
+  const car = {
+    model,
+    color,
+    licensePlate,
+  };
+
+  res.status(200).json(car);
+});
+
 module.exports = app;
