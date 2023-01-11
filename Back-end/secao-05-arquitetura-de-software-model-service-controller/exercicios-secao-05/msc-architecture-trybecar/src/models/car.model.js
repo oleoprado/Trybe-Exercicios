@@ -24,7 +24,10 @@ const findAll = async () => {
   return result;
 };
 
+const findById = (carId) => {};
+
 module.exports = {
   insertCar,
   findAll,
+  findById,
 };
