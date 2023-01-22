@@ -23,9 +23,17 @@ const update = async (id, title, author, pageQuantity) => {
   return Book.update({ title, author, pageQuantity }, { where: {id} });
 }
 
+const remove = async (id) => {
+  const book = await Book.findByPk(id);
+  if(!book) throw { status: 404, message: 'book not found'};
+
+  return Book.destroy({ where: { id }});
+}
+
 module.exports = {
   getAll,
   getById,
   create,
   update,
+  remove,
 }

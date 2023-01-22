@@ -40,9 +40,20 @@ const update = async (req, res, next) => {
   }
 }
 
+const remove = async (req, res, next) => {
+  try {
+    const { id } = req.params;
+    await booksService.remove(id);
+    res.status(200).json({ message: 'Livro excluído com sucesso'})
+  } catch (err) {
+    next(err)
+  }
+}
+
 module.exports = {
   getAll,
   getById,
   create,
   update,
+  remove,
 }
