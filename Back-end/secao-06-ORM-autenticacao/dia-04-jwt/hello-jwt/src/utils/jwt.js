@@ -2,7 +2,7 @@ require('dotenv').config();
 const jwt = require('jsonwebtoken');
 
 // criando a secret
-const SECRET = process.env.SECRET;
+const SECRET = process.env.JWT_SECRET;
 
 // configurando o jwt
 const jwtConfig = {
@@ -28,8 +28,7 @@ const decodeToken = (token) => {
     const result = jwt.verify(token, SECRET);
     return result;
   } catch (err) {
-    console.log(err.message);
-    throw new Error('Ivalid assignature')
+    return new Error(err.message)
   }
 }
 
