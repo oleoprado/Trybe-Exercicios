@@ -1,5 +1,5 @@
 require('dotenv').config();
-const jwt = require('jasonwebtoken');
+const jwt = require('jsonwebtoken');
 
 // criando a secret
 const SECRET = process.env.SECRET;
@@ -7,6 +7,7 @@ const SECRET = process.env.SECRET;
 // configurando o jwt
 const jwtConfig = {
   algorithm: 'HS256',
+  expiresIn: '1h',
 }
 
 // cria a função p/ gerar o token
