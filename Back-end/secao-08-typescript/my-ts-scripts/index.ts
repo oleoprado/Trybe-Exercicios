@@ -64,3 +64,7 @@ const isOfLegalAge = (param: string | boolean): boolean => {
 ageInput >= 18
   ? console.log(isOfLegalAge('true'))
   : console.log(isOfLegalAge(false));
+
+// EXERCICIO 2
+
+
