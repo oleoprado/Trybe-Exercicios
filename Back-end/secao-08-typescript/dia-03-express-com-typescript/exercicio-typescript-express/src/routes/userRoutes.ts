@@ -5,9 +5,12 @@ const routes = Router();
 const userController = new UserController();
 
 routes
-  .get('/', userController.getAllUsers);
+  .get('/', userController.getAllUsers)
+  .post('/', userController.createUser)
 
 routes
-  .get('/:id', userController.getUserById);
+  .get('/:id', userController.getUserById)
+  .put('/:id', userController.updateUser)
+  .delete('/:id', userController.deleteUser)
 
 export default routes;
