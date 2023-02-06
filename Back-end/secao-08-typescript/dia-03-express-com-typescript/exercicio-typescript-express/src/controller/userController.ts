@@ -22,6 +22,8 @@ export class UserController {
 
   public updateUser = async (req: Request, res: Response) => {
     const updatedUser = await this.userService.updateUser(req.params.id, req.body);
+    // req.user
+    
     res.status(statusCode.OK).json(updatedUser);
   }
 
