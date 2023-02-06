@@ -1,6 +1,7 @@
 import connection from "../db/connection";
 import { UserModel } from '../model/userModel';
 import { IUser } from '../interface/IUser';
+import { generateToken } from "../utils/jwt";
 
 export class UserService {
   public model: UserModel;
@@ -20,13 +21,14 @@ export class UserService {
   }
 
   public async createUser(user: IUser) {
-    const { email } = user;
+    const { email: emailReqBody } = user;
 
-    const userExist = await this.model.verifyIfUserExists(email);
+    const userExist = await this.model.verifyIfUserExists(emailReqBody);
     if (userExist) return { message: "User already exists" };
 
-    const newUser = await this.model.create(user);
-    return newUser;
+    const { id, email } = await this.model.create(user);
+    const token = await generateToken({ id, email })
+    return token;
   }
 
   public async updateUser(id: string, user: IUser) {

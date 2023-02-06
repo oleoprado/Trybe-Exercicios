@@ -9,9 +9,13 @@ const jwtConfig: SignOptions = {
 }
 
 export const generateToken = (payload: IJwtPayload) => {
+  if (!SECRET) {
+    throw new Error('JWT secret is not defined');
+  }
+
   try {
     return jwt.sign(payload, SECRET, jwtConfig);
-  } catch (error) {
+  } catch (error: any) {
     console.log('error no generateToken ', error.message);
     throw new Error('Failed to generate token');
   }
@@ -19,11 +23,13 @@ export const generateToken = (payload: IJwtPayload) => {
 
 export const decodeToken = (token: string) => {
   if (!token) throw new Error('Undefined token');
+  if (!SECRET) throw new Error('JWT secret is not defined');
 
   try {
     return jwt.verify(token, SECRET);
   } catch (error) {
-    console.log('erro no decodeToke ', error.message);
-    return new Error(error.message);
+    if (error instanceof Error) {
+      return new Error(error.message);
+    }
   }
 };

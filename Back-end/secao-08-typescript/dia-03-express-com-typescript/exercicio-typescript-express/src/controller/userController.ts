@@ -16,8 +16,8 @@ export class UserController {
   }
 
   public createUser = async (req: Request, res: Response) => {
-    const newUser = await this.userService.createUser(req.body);
-    res.status(statusCode.OK).json(newUser);
+    const token = await this.userService.createUser(req.body);
+    res.status(statusCode.OK).json({ token });
   }
 
   public updateUser = async (req: Request, res: Response) => {
