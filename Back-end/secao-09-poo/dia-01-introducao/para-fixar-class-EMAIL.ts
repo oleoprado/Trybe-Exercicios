@@ -36,3 +36,4 @@ class Email {
     ${this._message}`;
   }
 }
+
