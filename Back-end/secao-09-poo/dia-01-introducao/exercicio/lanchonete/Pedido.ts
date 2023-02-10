@@ -37,6 +37,17 @@ class Pedido {
     this._desconto = value;
   }
 
+  total(): number {
+    return this._itensConsumidos.reduce((acc, cur) => {
+      
+      return (acc + cur.preco);
+    }, 0)
+  }
+
+  totalComDesconto(): number {
+    const desconto = this.total() * this._desconto;
+    return this.total() - desconto;
+  }
 }
 
 export default Pedido;

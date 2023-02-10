@@ -12,3 +12,6 @@ const dessert = new ItemPedido('Gelatina de Uva', 2.50);
 const order = new Pedido(client, [sandwich, juice, dessert], 'dinheiro', 0.10);
 
 console.log(order);
+console.log(`O total do seu pedido: ${order.total()}`);
+console.log(`Aplicado o desconto de ${order.desconto}, total: ${order.totalComDesconto()}`);
+
