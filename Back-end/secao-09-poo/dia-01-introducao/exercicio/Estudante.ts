@@ -17,16 +17,15 @@ class Estudante {
   }
 
   get soma() {
-    const arrNotas = this._notasProva
+    const soma = this._notasProva
       .concat(this._notasTrabalho).reduce((acc, cur) => acc + cur, 0);
-    return console.log(`A soma das notas foi: ${arrNotas.toFixed(2)}`);
+    return soma;
   }
   get media() {
     const qtdNota = this._notasProva
       .concat(this._notasTrabalho).length;
-    const soma = this._notasProva
-      .concat(this._notasTrabalho).reduce((acc, cur) => acc + cur, 0);
-    return console.log(`A média das notas foi: ${(soma/qtdNota).toFixed(2)}`)
+    
+    return console.log(`A soma ds notas: ${(this.soma/qtdNota).toFixed(2)}`)
   }
 }
 
