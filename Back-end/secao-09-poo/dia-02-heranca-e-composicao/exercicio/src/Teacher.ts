@@ -37,22 +37,22 @@ class Teacher extends Person implements IEmployee {
     this._admissionDate = value;
   }
 
-  generateRegistration(): string {
+   generateRegistration(): string {
     const randomStr = String(Date.now() * (Math.random() + 1)).replace(/\W/g, '');
     return `PRF${randomStr}`;
   }
 
-  validateRegistration(value: string): void {
+  private validateRegistration(value: string): void {
     if (value.length < 16) {
       throw new Error('O registro deve possuir no mínimo 16 caracteres.');
     }
   }
 
-  validateSalary(value: number): void {
+  private validateSalary(value: number): void {
     if (value < 0) throw new Error('O salário não pode ser negativo.');
   }
 
-  validateAdmissionDate(value: Date): void {
+  private validateAdmissionDate(value: Date): void {
     if (value.getTime() > new Date().getTime()) {
       throw new Error('A data de admissão não pode ser uma data no futuro.');
     }
