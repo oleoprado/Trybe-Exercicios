@@ -27,6 +27,7 @@ class PlantService implements IService<IPlant, INewPlant> {
     const newPlant = await this.model.create({ ...plant, waterFrequency });
     return newPlant;
   }
+
   public async getById(id: string): Promise<IPlant> {
     const plant = await this.model.getById(id);
     if (!plant) throw new NotFoundException('Plant not Found!');

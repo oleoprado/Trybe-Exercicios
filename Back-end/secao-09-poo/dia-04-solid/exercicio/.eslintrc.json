@@ -16,7 +16,7 @@
   "parserOptions": {
     "ecmaVersion": 2019,
     "sourceType": "module",
-    "project": "./tsconfig.json"
+    "project": "./dia-04-solid/exercicio/tsconfig.json"
   },
   "plugins": [
     "@typescript-eslint"
