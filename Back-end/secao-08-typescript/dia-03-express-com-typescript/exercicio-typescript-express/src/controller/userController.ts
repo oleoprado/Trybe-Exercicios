@@ -4,7 +4,7 @@ import { UserService } from '../service/userService';
 
 export class UserController {
   constructor(private userService = new UserService()) {}
-
+//pegar todos os usuarios
   public getAllUsers = async (req: Request, res: Response) => {
     const users = await this.userService.getAllUsers();
     res.status(statusCode.OK).json(users);
