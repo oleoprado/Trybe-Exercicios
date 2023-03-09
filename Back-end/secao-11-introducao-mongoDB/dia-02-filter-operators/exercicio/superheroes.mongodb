@@ -1,0 +1,3 @@
+use ('superheroes_db');
+
+db.superheroes.countDocuments({});
